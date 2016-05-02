@@ -1,9 +1,0 @@
-{% if ( 'disqus' == config.plugins.jscomments.provider ) %}
-  {% include 'providers/disqus.html.twig' %}
-{% elseif ( 'intensedebate' == config.plugins.jscomments.provider ) %}
-  {% include 'providers/intensedebate.html.twig' %}
-{% elseif ( 'facebook' == config.plugins.jscomments.provider ) %}
-  {% include 'providers/facebook.html.twig' %}
-{% elseif ( 'muut' == config.plugins.jscomments.provider ) %}
-  {% include 'providers/muut.html.twig' %}
-{% endif %}

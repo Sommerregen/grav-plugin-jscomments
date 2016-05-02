@@ -1,0 +1,17 @@
+<div id="jscomments">
+    <a class="muut"
+        href="https://muut.com/i/{{ forum | e('html_attr') }}/comments{{ url | default(page.url) | e('html_attr') }}"
+        title="{{ title | default(page.title) | e('html_attr') }}"
+        data-channel="{{ channel | e('html_attr') }}"
+        data-show_online="{{ show_online | e('html_attr') }}"
+        data-show_title="{{ show_title | e('html_attr') }}"
+        data-upload="{{ upload | e('html_attr') }}"
+        data-share="{{ share | e('html_attr') }}"
+        data-widget="{{ widget | e('html_attr') }}">
+        {{ 'PLUGIN_JSCOMMENTS.MUUT.COMMENTS' | t }}
+    </a>
+
+    {% set language =  grav.language.getActive ?: lang %}
+
+    <script src="//cdn.muut.com/1/moot.{{ language | e('html_attr') }}.min.js"></script>
+</div>

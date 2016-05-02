@@ -1,0 +1,17 @@
+<div id="jscomments">
+    <div id="fb-root"></div>
+
+    {# I don't know if this is the best way to get the Facebook language, but in most case working fine! #}
+    {% set language = grav.language.getActive ? grav.language.getActive ~ '_' ~ grav.language.getActive | upper : lang %}
+
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/{{ language | e('js') }}/sdk.js#xfbml=1&appId={{ appId | e('js') }}&version=v2.4";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="fb-comments" data-href="{{ url | default(page.url(true)) | e('html_attr') }}" data-numposts="{{ num_posts | e('html_attr') }}" data-colorscheme="{{ colorscheme | e('html_attr') }}" data-order-by="{{ order_by | e('html_attr') }}" data-width="{{ width | e('html_attr') }}"></div>
+</div>

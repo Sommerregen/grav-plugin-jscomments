@@ -1,0 +1,22 @@
+<div id="jscomments">
+    <div id="disqus_thread"></div>
+
+    {% set language = grav.language.getActive ?: default_lang %}
+
+    <script type="text/javascript">
+        var disqus_config = function () {
+            this.language = '{{ language | e('js') }}';
+        };
+        var disqus_shortname  = '{{ shortname | e('js') }}'; // required: replace example with your forum shortname
+        var disqus_title      = '{{ title | default(page.title) | e('js') }}';
+        var disqus_identifier = '{{ identifier | default(page.url(true)) | e('js') }}';
+        var disqus_url        = '{{ url | default(page.url(true)) | e('js') }}';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>{{ 'PLUGIN_JSCOMMENTS.DISQUS.NOSCRIPT' | t }}</noscript>
+    {{ 'PLUGIN_JSCOMMENTS.DISQUS.COPYRIGHT' | t }}
+</div>

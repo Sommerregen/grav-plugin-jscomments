@@ -1,9 +1,0 @@
-<div id="jscomments">
-  <script>
-    var idcomments_acct     = '{{ config.plugins.jscomments.providers.intensedebate.acct|e('js') }}';
-    var idcomments_post_id  = '{{ config.plugins.jscomments.providers.intensedebate.post_id|default(page.url(true))|e }}';
-    var idcomments_post_url = '{{ config.plugins.jscomments.providers.intensedebate.post_url|default(page.url(true))|e }}';
-  </script>
-  <span id="IDCommentsPostTitle" style="display:none"></span>
-  <script src="http://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>
-</div>

@@ -1,0 +1,9 @@
+<div id="jscomments">
+    <script>
+        var idcomments_acct     = '{{ acct | e('js') }}';
+        var idcomments_post_id  = '{{ post_id | default(page.url(true)) | e('js') }}';
+        var idcomments_post_url = '{{ post_url | default(page.url(true)) | e('js') }}';
+    </script>
+    <span id="IDCommentsPostTitle" style="display:none"></span>
+    <script src="http://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>
+</div>

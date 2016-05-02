@@ -26,16 +26,22 @@ You should now have all the plugin files under
 
     /your/site/grav/user/plugins/jscomments
 
->> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins, and a theme to be installed in order to operate.
+> **NOTE:** This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins, and a theme to be installed in order to operate.
 
 # Usage
 
+### Admin Plugin Setup
+
+If you use the admin plugin you can choice the provider directly on the page edit following the tab "Options" after Taxonomies.
+
+> **NOTE:** Remember you need to setup the provider settings before into the plugin settings page.
+
 ### Initial Setup
 
-Place the following line of code in the theme file you wish to add jscomments for:
+Place the following line of code in the theme file or page (__you need enabled Twig process in the config before using Twig functions into the page__) you wish to add jscomments for:
 
-```twig
-{% if (config.plugins.jscomments.enabled) %}{% include 'jscomments.html.twig' %}{% endif %}
+```
+{{ jscomments() }}
 ```
 
 This code works best when placed within the content block of the page, just below the main `{{ page.content }}` tag. This will place it at the bottom of the page's content.
@@ -48,19 +54,17 @@ You have the ability to set a number of variables that affect the JSComments plu
 
 These options can exist in two places. Primarily, your user defaults will be set within the **jscomments.yaml** file in the `user/config/plugins/` directory. If you do not have a `user/config/plugins/` already, create the folder as it will enable you to change the default settings of the plugin without losing these updates in the event that the plugin is updated and/or reinstalled later on.
 
-Alterantively, you can override these defaults within the
-
 Here are the variables available:
 
 ```yaml
-enable: true # Enable / Disable the plugin
+enabled: true # Enable / Disable the plugin
 
 provider: "disqus" # (disqus | intensedebate | facebook | muut)
 
 providers:
   disqus:
-    shotname: ""
-    developer: false
+    shortname: ""
+    default_lang: en
 
   intensedebate:
     acct: ""
@@ -68,8 +72,9 @@ providers:
   facebook:
     appId: ""
     lang: "en_US"
-    numposts: 5
+    num_posts: 5
     colorscheme: "light"
+    order_by: social
     width: "100%"
 
   muut:
@@ -91,6 +96,7 @@ jscomments:
   providers:
     disqus:
       shortname: "disqus_shortname_example"
+      default_lang: it
       title: "Different title page"
       id: "page-slug-example"
 ```
@@ -102,17 +108,28 @@ provider: disqus
 providers:
   disqus:
     shortname: "disqus_shortname_example"
-    developer: false
 ```
 
-If you want disable the comments in one page you can setup the page headers with this example:
+If you want enable the comments in one page you can setup the page headers with this example (_after v1.2.5 jscomments are disabled by default for global, so you need to setup in everyone page header or via template function_):
 
 ```yaml
 jscomments:
-  enabled: false
+  provider: provider_name
 ```
 
-For most users, only the **provider** option will need to be set, in the providers setting you need to setup where you found "" string because this key is required for working the provider. This will pull the comments settings from your account and pull information (such as the page title) from the page.
+Or via twig function:
+
+```twig
+{{ jscomments('provider_name', { param: value }) }}
+```
+
+Example for disqus with minimum params:
+
+```twig
+{{ jscomments('disqus', { shortname: example }) }}
+```
+
+For most users, only the **provider** option will need to be set (_after v1.2.5 you can't use because the plugin read the global plugin settings_). This will pull the comments settings from your account and pull information (such as the page title) from the page.
 
 >> NOTE: Any time you are making alterations to a theme's files, you will want to duplicate the theme folder in the `user/themes/` directory, rename it, and set the new name as your active theme. This will ensure that you don't lose your customizations in the event that a theme is updated. Once you have tested the change thoroughly, you can delete or back up that folder elsewhere.
 
@@ -127,6 +144,7 @@ The simplest way to update this plugin is via the [Grav Package Manager (GPM)](h
     bin/gpm update jscomments
 
 This command will check your Grav install to see if your plugin is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The plugin will automatically update and clear Grav's cache.
+
 
 ## Manual Update
 

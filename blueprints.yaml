@@ -1,11 +1,10 @@
 name: JSComments
-version: 1.2.0
+version: 1.2.10
 description: "Add comments in your site with Disqus, IntenseDebate, Facebook, and Muut comment system."
 icon: comments-o
 author:
   name: Sommerregen
   email: sommerregen@benjamin-regler.de
-  url: benjamin-regler.de
 homepage: https://github.com/sommerregen/
 homepage: https://github.com/sommerregen/grav-plugin-jscomments
 keywords: [jscomments, plugin, comments, services, disqus, intensedebate, facebook, muut]
@@ -14,14 +13,130 @@ bugs: https://github.com/sommerregen/grav-plugin-jscomments/issues
 license: MIT/GPL
 
 form:
+  validation: strict
   fields:
     enabled:
       type: toggle
-      label: Plugin status
+      label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.ENABLED.LABEL
       highlight: 1
-      default: 0
+      default: 1
       options:
-        1: Enabled
-        0: Disabled
+        1: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.ENABLED
+        0: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.DISABLED
       validate:
         type: bool
+
+    disqus:
+      type: section
+      title: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.DISQUS.TITLE
+      underline: true
+      fields:
+        providers.disqus.shortname:
+          type: text
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.DISQUS.FIELDS.SHORTNAME.LABEL
+        providers.disqus.default_lang:
+          type: text
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.DISQUS.FIELDS.DEFAULT_LANG.LABEL
+    intensedebate:
+      type: section
+      title: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.INTENSEDEBATE.TITLE
+      underline: true
+      fields:
+        providers.intensedebate.acct:
+          type: text
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.INTENSEDEBATE.FIELDS.ACCT.LABEL
+    facebook:
+      type: section
+      title: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.TITLE
+      underline: true
+      fields:
+        providers.facebook.appId:
+          type: text
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.APPID.LABEL
+        providers.facebook.lang:
+          type: text
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.LANG.LABEL
+        providers.facebook.num_posts:
+          type: text
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.NUM_POSTS.LABEL
+          validate:
+            type: int
+        providers.facebook.colorscheme:
+          type: select
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.COLORSCHEME.LABEL
+          default: light
+          options:
+            light: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.COLORSCHEME.OPTIONS.LIGHT
+            dark: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.COLORSCHEME.OPTIONS.DARK
+        providers.facebook.order_by:
+          type: select
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.ORDER_BY.LABEL
+          default: social
+          options:
+            social: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.SOCIAL
+            reverse_time: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.REVERSE_TIME
+            time: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.TIME
+        providers.facebook.width:
+          type: text
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.WIDTH.LABEL
+    muut:
+      type: section
+      title: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.MUUT.TITLE
+      underline: true
+      fields:
+        providers.muut.forum:
+          type: text
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.MUUT.FIELDS.FORUM.LABEL
+        providers.muut.channel:
+          type: text
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.MUUT.FIELDS.CHANNEL.LABEL
+        providers.muut.show_online:
+          type: toggle
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.MUUT.FIELDS.SHOW_ONLINE.LABEL
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.ENABLED
+            0: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.DISABLED
+          validate:
+            type: bool
+        providers.muut.show_title:
+          type: toggle
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.MUUT.FIELDS.SHOW_TITLE.LABEL
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.ENABLED
+            0: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.DISABLED
+          validate:
+            type: bool
+        providers.muut.upload:
+          type: toggle
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.MUUT.FIELDS.UPLOAD.LABEL
+          highlight: 1
+          options:
+            1: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.ENABLED
+            0: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.DISABLED
+          validate:
+            type: bool
+        providers.muut.share:
+          type: toggle
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.MUUT.FIELDS.SHARE.LABEL
+          highlight: 1
+          options:
+            1: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.ENABLED
+            0: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.DISABLED
+          validate:
+            type: bool
+        providers.muut.widget:
+          type: toggle
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.MUUT.FIELDS.WIDGET.LABEL
+          highlight: 1
+          options:
+            1: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.ENABLED
+            0: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.DISABLED
+          validate:
+            type: bool
+        providers.muut.lang:
+          type: text
+          label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.MUUT.FIELDS.LANG.LABEL

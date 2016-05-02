@@ -2,12 +2,10 @@
 
 enabled: true               # Set to false to disable this plugin completely
 
-provider: ""
-
 providers:
   disqus:
-    shotname: ""
-    developer: false
+    shortname: ""
+    default_lang: en
 
   intensedebate:
     acct: ""
@@ -15,8 +13,9 @@ providers:
   facebook:
     appId: ""
     lang: "en_US"
-    numposts: 5
+    num_posts: 5
     colorscheme: "light"
+    order_by: social
     width: "100%"
 
   muut:
