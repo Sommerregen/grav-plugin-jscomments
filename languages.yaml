@@ -1,152 +1,142 @@
+# English
 en:
-  PLUGIN_JSCOMMENTS:
-    ADMIN:
-      BLUEPRINTS:
-        GLOBAL:
-          ENABLED: Enabled
-          DISABLED: Disabled
-        TAB:
-          TITLE: JSComments
-          FIELDS:
-            PROVIDER:
-              LABEL: Provider
-        ENABLED:
-          LABEL: Plugin status
-        DISCOURSE:
-          TITLE: Discourse Options
-          FIELDS:
-            URL:
-              LABEL: URL
-        DISQUS:
-          TITLE: Disqus Options
-          FIELDS:
-            SHORTNAME:
-              LABEL: Shortname
-            DEFAULT_LANG:
-              LABEL: Default language
-        INTENSEDEBATE:
-          TITLE: IntenseDebate Options
-          FIELDS:
-            ACCT:
-              LABEL: ACCT
-        FACEBOOK:
-          TITLE: Facebook Options
-          FIELDS:
-            APPID:
-              LABEL: appId
-            LANG:
-              LABEL: Language
-            NUM_POSTS:
-              LABEL: Number of visible posts
-            COLORSCHEME:
-              LABEL: Color scheme
-              OPTIONS:
-                LIGHT: Light
-                DARK: Dark
-            ORDER_BY:
-              LABEL: Order by
-              OPTIONS:
-                SOCIAL: Social
-                REVERSE_TIME: Reverse time
-                TIME: Time
-            WIDTH:
-              LABEL: Width (px or %)
-        MUUT:
-          TITLE: Muut Options
-          FIELDS:
-            FORUM:
-              LABEL: Forum name
-            CHANNEL:
-              LABEL: Channel
-            SHOW_ONLINE:
-              LABEL: Show online
-            SHOW_TITLE:
-              LABEL: Show title
-            UPLOAD:
-              LABEL: Upload
-            SHARE:
-              LABEL: Share
-            WIDGET:
-              LABEL: Widget
-            LANG:
-              LABEL: Language
-    DISCOURSE:
-      NOSCRIPT: Please enable JavaScript to view the <a href="https://www.discourse.org/">comments powered by Discourse.</a>
-    DISQUS:
-      NOSCRIPT: Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-      COPYRIGHT: <a href="http://disqus.com" class="dsq-brlink">Blog Comments Powered by <span class="logo-disqus">Disqus</span></a>
-    MUUT:
-      COMMENTS: Comments
+  PLUGINS:
+    JS_COMMENTS:
+      PLUGIN_NAME: 'JSComments'
+      PLUGIN_STATUS: 'Plugin status'
+      PLUGIN_ACTIVE: 'Active'
+      PLUGIN_ACTIVE_HELP: 'This option is used to (de-)activate this plugin on a per-page basis.'
+      NONE_SELECTED: '- None selected -'
+      USE_DEFAULT: '- Use default -'
 
-it:
-  PLUGIN_JSCOMMENTS:
-    ADMIN:
-      BLUEPRINTS:
-        GLOBAL:
-          ENABLED: Attivo
-          DISABLED: Disattivato
-        TAB:
-          TITLE: JSComments
+      OVERRIDE:
+        PAGE_TITLE: 'Override page title'
+        PAGE_URL: 'Override page URL'
+        PAGE_ID: 'Override page ID'
+
+      PROVIDERS:
+        TITLE: 'Provider'
+        HELP: 'Choose a comment system provider.'
+
+        DISCOURSE:
+          NOSCRIPT: 'Please enable JavaScript to view the <a href="https://www.discourse.org/">comments powered by Discourse.</a>'
+          COPYRIGHT: '<a href="https://www.discourse.org/">Blog Comments powered by <span>Discourse</span>.</a>'
+
           FIELDS:
-            PROVIDER:
-              LABEL: Provider
-        ENABLED:
-          LABEL: Stato del plugin
+            HOST: 'Discourse URL'
+            HOST_HELP: 'The URL to the Discourse commenting system.'
+
         DISQUS:
-          TITLE: Opzioni Disqus
+          TITLE: 'Disqus'
+          NOSCRIPT: 'Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>'
+          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink">Blog Comments powered by <span class="logo-disqus">Disqus</span>.</a>'
+
           FIELDS:
-            SHORTNAME:
-              LABEL: Shortname
-            DEFAULT_LANG:
-              LABEL: Lingua predefina
-        INTENSEDEBATE:
-          TITLE: Opzioni IntenseDebate
-          FIELDS:
-            ACCT:
-              LABEL: ACCT
+            SHORTNAME: 'Forum shortname'
+            SHORTNAME_HELP: "Tells the Disqus service your forum's shortname, which is the unique identifier for your website as registered on Disqus. If undefined, the Disqus embed will not load."
+
+            COUNT: 'Show comment count'
+
+            DEFAULT_LANGUAGE: 'Default language'
+            DEFAULT_LANGUAGE_HELP: 'Dynamically load the Disqus embed in different languages on a per-page basis.'
+
         FACEBOOK:
-          TITLE: Opzioni Facebook
+          TITLE: 'Facebook'
           FIELDS:
-            APPID:
-              LABEL: appId
-            LANG:
-              LABEL: Lingua
-            NUM_POSTS:
-              LABEL: Numero dei posts visibili
+            APPID: 'App ID'
+            APPID_HELP: 'The App ID you get from the Facebook Developers page (https://developers.facebook.com/apps).'
+            LANGUAGE: 'Language'
+            LANGUAGE_HELP: 'Adjust the language of the Comments plugin by loading a localized version of the Facebook SDK for JavaScript.'
+            NUM_POSTS: 'Number of visible posts'
+            NUM_POSTS_HELP: 'The number of comments to show by default.'
+            NUM_POSTS_APPEND: 'posts'
             COLORSCHEME:
-              LABEL: Colore schema
+              TITLE: 'Color scheme'
+              HELP: 'The color scheme used by the comments plugin. Can be "light" or "dark".'
               OPTIONS:
-                LIGHT: Chiaro
-                DARK: Scuro
+                LIGHT: 'Light'
+                DARK: 'Dark'
             ORDER_BY:
-              LABEL: Ordina per
+              TITLE: 'Order by'
+              HELP: 'The order to use when displaying comments.'
               OPTIONS:
-                SOCIAL: Sociale
-                REVERSE_TIME: Tempo inverso
-                TIME: Tempo
-            WIDTH:
-              LABEL: Larghezza (px o %)
-        MUUT:
-          TITLE: Opzioni Muut
+                SOCIAL: 'Social'
+                REVERSE_TIME: 'Reverse time'
+                TIME: 'Time'
+            WIDTH: 'Width (px or %)'
+            WIDTH_HELP: 'The width of the comments plugin on the webpage. This can be either a pixel value or a percentage (such as 100%) for fluid width.'
+
+        INTENSEDEBATE:
+          TITLE: 'IntenseDebate'
+
           FIELDS:
-            FORUM:
-              LABEL: Nome Forum
-            CHANNEL:
-              LABEL: Canale
-            SHOW_ONLINE:
-              LABEL: Visualizza online
-            SHOW_TITLE:
-              LABEL: Visualizza titolo
-            UPLOAD:
-              LABEL: Upload
-            SHARE:
-              LABEL: Share
-            WIDGET:
-              LABEL: Widget
-            LANG:
-              LABEL: Lingua
-    DISQUS:
-      NOSCRIPT: Per farvore abilita JavaScript per visualizzare <a href="http://disqus.com/?ref_noscript">i commenti offerto da Disqus.</a>
-      COPYRIGHT: <a href="http://disqus.com" class="dsq-brlink">Commenti offerti da <span class="logo-disqus">Disqus</span></a>
-    MUUT:
-      COMMENTS: Commenti
+            ACCOUNT_NUMBER: 'Account number'
+            ACCOUNT_NUMBER_HELP: 'This is your IntenseDebate blog account number, which is assigned when you create your account.'
+
+        MUUT:
+          TITLE: 'Muut'
+          COMMENTS: 'Comments'
+          FIELDS:
+            FORUM: 'Forum name'
+            CHANNEL: 'Channel'
+            SHOW_ONLINE: 'Show online'
+            SHOW_TITLE: 'Show title'
+            UPLOAD: 'Allow uploads'
+            SHARE: 'Show "Like" button'
+            WIDGET: 'Messages widget'
+            WIDGET_HELP: 'Shows a message button on the bottom-right of the browser.'
+            LANGUAGE: 'Language'
+
+# Italian
+it:
+  PLUGINS:
+    JS_COMMENTS:
+      PLUGIN_NAME: 'JSComments'
+      PLUGIN_STATUS: 'Stato del plugin'
+
+      PROVIDERS:
+        TITLE: 'Provider'
+
+        DISQUS:
+          TITLE: 'Disqus'
+          NOSCRIPT: 'Per farvore abilita JavaScript per visualizzare <a href="http://disqus.com/?ref_noscript">i commenti offerto da Disqus.</a>'
+          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink">Commenti offerti da <span class="logo-disqus">Disqus</span></a>'
+
+          FIELDS:
+            SHORTNAME: 'Shortname'
+            DEFAULT_LANGUAGE: 'Lingua predefina'
+
+        FACEBOOK:
+          TITLE: 'Facebook'
+          FIELDS:
+            APPID: 'App ID'
+            LANGUAGE: 'Lingua'
+            NUM_POSTS: 'Numero dei posts visibili'
+            NUM_POSTS_APPEND: 'posts'
+            COLORSCHEME:
+              TITLE: 'Colore schema'
+              OPTIONS:
+                LIGHT: 'Chiaro'
+                DARK: 'Scuro'
+            ORDER_BY:
+              TITLE: 'Ordina per'
+              OPTIONS:
+                SOCIAL: 'Sociale'
+                REVERSE_TIME: 'Tempo inverso'
+                TIME: 'Tempo'
+            WIDTH: 'Larghezza (px o %)'
+
+        INTENSEDEBATE:
+          TITLE: 'IntenseDebate'
+
+        MUUT:
+          TITLE: 'Muut'
+          COMMENTS: 'Commenti'
+
+          FIELDS:
+            FORUM: 'Nome Forum'
+            CHANNEL: 'Canale'
+            SHOW_ONLINE: 'Visualizza online'
+            SHOW_TITLE: 'Visualizza titolo'
+            WIDGET: 'Widget'
+            LANGUAGE: 'Lingua'

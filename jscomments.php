@@ -19,6 +19,7 @@
 
 namespace Grav\Plugin;
 
+use Grav\Common\Grav;
 use Grav\Common\Data\Blueprints;
 use Grav\Common\Plugin;
 use Grav\Common\Page\Page;
@@ -225,5 +226,28 @@ class JSCommentsPlugin extends Plugin
         $config = $this->mergeConfig($page);
 
         return $config->get($provider_key);
+    }
+
+    /**
+     * Get installed JSComments provider
+     *
+     * @return array An array of installed and available proivders.
+     */
+    static public function getProviders()
+    {
+        /** @var \Grav\common\Grav $grav */
+        $grav = Grav::instance();
+
+        $providers = [];
+        $keys = $grav['config']->get('plugins.jscomments.providers', []);
+
+        // Allow mult-language translations of Provider names
+        foreach ($keys as $key => $options) {
+            $providers[$key] = 'PLUGINS.JS_COMMENTS.PROVIDERS.' . strtoupper($key);
+        }
+
+        // Sort alphabetically using PHP's strnatcasecmp function
+        uksort($providers, 'strnatcasecmp');
+        return $providers;
     }
 }
