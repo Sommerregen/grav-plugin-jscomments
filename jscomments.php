@@ -93,7 +93,7 @@ class JSCommentsPlugin extends Plugin
         /** @var \Grav\Common\Data\Blueprint $blueprint */
         $blueprint = $event['blueprint'];
 
-        if (false === $inEvent and $blueprint->get('form.fields.tabs')) {
+        if (false === $inEvent and $blueprint->get('form/fields/tabs', null, '/')) {
             $inEvent = true;
             $blueprints = new Blueprints(__DIR__ . '/blueprints/');
             $extends = $blueprints->get('jscomments');
