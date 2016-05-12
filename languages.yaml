@@ -1,3 +1,94 @@
+# German
+de:
+  PLUGINS:
+    JS_COMMENTS:
+      PLUGIN_NAME: 'JSComments'
+      PLUGIN_STATUS: 'Plugin Status'
+      PLUGIN_ACTIVE: 'Aktiv'
+      PLUGIN_ACTIVE_HELP: 'Diese Option dient zur (De-)Aktivierung des Plugins auf Seiten-Ebene.'
+      NONE_SELECTED: '- Nichts ausgewählt -'
+      USE_DEFAULT: '- Standard -'
+
+      OVERRIDE:
+        PAGE_TITLE: 'Überschreibe Seiten-Titel'
+        PAGE_URL: 'Überschreibe Seiten-URL'
+        PAGE_ID: 'Überschreibe Seiten-ID'
+
+      PROVIDERS:
+        TITLE: 'Provider'
+        HELP: 'Wähle ein Kommentarsystem-Dienst.'
+
+        DISCOURSE:
+          TITLE: 'Discourse'
+          NOSCRIPT: 'Bitte aktivieren Sie JavaScript um <a href="https://www.discourse.org/">die Discourse-Kommentare anzuzeigen zu können.</a>'
+          COPYRIGHT: '<a href="https://www.discourse.org/">Kommentare unterstützt von <span>Discourse</span>.</a>'
+
+          FIELDS:
+            HOST: 'Discourse-URL'
+            HOST_HELP: 'Die URL zum Discourse-Kommentardienst.'
+
+        DISQUS:
+          TITLE: 'Disqus'
+          NOSCRIPT: 'Bitte aktivieren Sie JavaScript um <a href="http://disqus.com/?ref_noscript">die Disqus-Kommentare anzuzeigen zu können.</a>'
+          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink">Kommentare unterstützt von <span class="logo-disqus">Disqus</span>.</a>'
+
+          FIELDS:
+            SHORTNAME: 'Forum Kurzname'
+            SHORTNAME_HELP: "Ermöglicht dem Disqus-Dienst deinen eindeutigen Forum Kurznamen zu laden. Falls undefiniert wird Disqus keine Kommentare laden."
+
+            COUNT: 'Kommentarzähler anzeigen'
+
+            DEFAULT_LANGUAGE: 'Sprache'
+            DEFAULT_LANGUAGE_HELP: 'Verwende dei eingestellte Sprache für das Disqus-Kommentarfeld.'
+
+        FACEBOOK:
+          TITLE: 'Facebook'
+          FIELDS:
+            APPID: 'App ID'
+            APPID_HELP: 'Die App ID, die man von der Facebook Developers Seite erhält (https://developers.facebook.com/apps).'
+            LANGUAGE: 'Sprache'
+            LANGUAGE_HELP: 'Passe die Sprache des Kommentar-Moduls an (lädt eine lokalisierte Version des Facebook SDK für JavaSkript).'
+            NUM_POSTS: 'Anzahl Kommentare'
+            NUM_POSTS_HELP: 'Die Anzahl an Kommentaren, die standardmäßig angezeigt werden.'
+            NUM_POSTS_APPEND: 'Kommentare'
+            COLORSCHEME:
+              TITLE: 'Farbschema'
+              HELP: 'Das verwendete Farbschema. Kann "hell" oder "dunkel" sein.'
+              OPTIONS:
+                LIGHT: 'Hell'
+                DARK: 'Dunkel'
+            ORDER_BY:
+              TITLE: 'Reihenfolge'
+              HELP: 'Beeinflusst die Reihenfolge wie Kommenare angezeigt werden.'
+              OPTIONS:
+                SOCIAL: 'Sozial'
+                REVERSE_TIME: 'Umgekehrt zeitlich geordnet'
+                TIME: 'Zeitlich geordnet'
+            WIDTH: 'Breite (px oder %)'
+            WIDTH_HELP: 'Die Breite des Kommentar-Plugins auf der Webseite. Das kann ein Pixel-Wert oder ein prozentualer Wert sein (wie z.B. 100% für dynamische Breiten).'
+
+
+        INTENSEDEBATE:
+          TITLE: 'IntenseDebate'
+
+          FIELDS:
+            ACCOUNT_NUMBER: 'Account Nummer'
+            ACCOUNT_NUMBER_HELP: 'Dies ist deine IntenseDebate Blog Account-Nummer, die du nach dem Erstellen des Blog-Accounts vorfindest.'
+
+        MUUT:
+          TITLE: 'Muut'
+          COMMENTS: 'Kommentare'
+          FIELDS:
+            FORUM: 'Forum Name'
+            CHANNEL: 'Kanal'
+            SHOW_ONLINE: 'Online-User anzeigen'
+            SHOW_TITLE: 'Titel anzeigen'
+            UPLOAD: 'Uploads erlauben'
+            SHARE: '"Gefällt mir"-Button anzeigen'
+            WIDGET: 'Nachrichten-Widget'
+            WIDGET_HELP: 'Blendet ein Nachrichten-Button auf der unteren rechten Seite des Browsers ein.'
+            LANGUAGE: 'Sprache'
+
 # English
 en:
   PLUGINS:
