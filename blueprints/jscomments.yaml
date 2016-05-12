@@ -19,7 +19,8 @@ form:
                   default: ''
                   options:
                     '': PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.GLOBAL.DISABLED
+                    discourse: "Discourse"
                     disqus: "Disqus"
-                    intensedebate: "IntenseDebate"
                     facebook: "Facebook"
+                    intensedebate: "IntenseDebate"
                     muut: "Muut"

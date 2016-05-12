@@ -3,6 +3,9 @@
 enabled: true               # Set to false to disable this plugin completely
 
 providers:
+  discourse:
+    url: ""
+
   disqus:
     shortname: ""
     default_lang: en
