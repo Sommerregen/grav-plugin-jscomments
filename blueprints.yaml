@@ -31,17 +31,15 @@ form:
         type: bool
 
     discourse:
-      type: section
+      type: tab
       title: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.DISCOURSE.TITLE
-      underline: true
       fields:
         providers.discourse.url:
           type: text
           label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.DISCOURSE.FIELDS.URL.LABEL
     disqus:
-      type: section
+      type: tab
       title: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.DISQUS.TITLE
-      underline: true
       fields:
         providers.disqus.shortname:
           type: text
@@ -50,17 +48,15 @@ form:
           type: text
           label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.DISQUS.FIELDS.DEFAULT_LANG.LABEL
     intensedebate:
-      type: section
+      type: tab
       title: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.INTENSEDEBATE.TITLE
-      underline: true
       fields:
         providers.intensedebate.acct:
           type: text
           label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.INTENSEDEBATE.FIELDS.ACCT.LABEL
     facebook:
-      type: section
+      type: tab
       title: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.TITLE
-      underline: true
       fields:
         providers.facebook.appId:
           type: text
@@ -92,9 +88,8 @@ form:
           type: text
           label: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.FACEBOOK.FIELDS.WIDTH.LABEL
     muut:
-      type: section
+      type: tab
       title: PLUGIN_JSCOMMENTS.ADMIN.BLUEPRINTS.MUUT.TITLE
-      underline: true
       fields:
         providers.muut.forum:
           type: text
