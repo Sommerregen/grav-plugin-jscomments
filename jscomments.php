@@ -3,7 +3,8 @@
  * JSComments v2.0.0
  *
  * This plugin allows Grav to integrate comments into individual pages
- * from Discourse / Disqus / Facebook / IntenseDebate and Muut comments system.
+ * from Discourse / Disqus / Facebook / IntenseDebate and Muut comments
+ * system.
  *
  * Dual licensed under the MIT or GPL Version 3 licenses, see LICENSE.
  * http://benjamin-regler.de/license/
@@ -20,64 +21,59 @@
 namespace Grav\Plugin;
 
 use Grav\Common\Grav;
-use Grav\Common\Data\Blueprints;
 use Grav\Common\Plugin;
-use Grav\Common\Page\Page;
+use Grav\Common\Data\Blueprints;
 use RocketTheme\Toolbox\Event\Event;
+use Grav\Plugin\JSComments\Twig\JSCommentsTwigExtension;
 
 /**
  * Class JSCommentsPlugin
+ *
+ * This plugin allows Grav to integrate comments into individual pages
+ * from Discourse / Disqus / Facebook / IntenseDebate and Muut comments
+ * system.
+ *
  * @package Grav\Plugin
  */
 class JSCommentsPlugin extends Plugin
 {
     /**
-     * @return array
+     * Return a list of subscribed events.
+     *
+     * @return array    The list of events of the plugin of the form
+     *                      'name' => ['method_name', priority].
      */
     public static function getSubscribedEvents()
     {
         return [
-            'onPluginsInitialized'  => ['onPluginsInitialized', 0],
-            'onBlueprintCreated'    => ['onBlueprintCreated', 0]
+            'onPluginsInitialized'  => ['onPluginsInitialized', 0]
         ];
     }
 
     /**
-     *
+     * Initialize configuration
      */
     public function onPluginsInitialized()
     {
-        if (true === $this->isAdmin()) {
-            $this->active = false;
-            return;
+        if ($this->config->get('plugins.jscomments.enabled')) {
+            $events = [
+                'onTwigTemplatePaths'   => ['onTwigTemplatePaths', 0],
+                'onTwigExtensions'      => ['onTwigExtensions', 0]
+            ];
+
+            if ($this->isAdmin()) {
+                $this->active = false;
+                $events = [
+                    'onBlueprintCreated' => ['onBlueprintCreated', 0]
+                ];
+            }
+
+            $this->enable($events);
         }
-
-        $this->enable([
-            'onTwigTemplatePaths'   => ['onTwigTemplatePaths', 0],
-            'onTwigInitialized'     => ['onTwigInitialized', 0]
-        ]);
     }
 
     /**
-     *
-     */
-    public function onTwigInitialized()
-    {
-        $this->grav['twig']->twig()->addFunction(
-            new \Twig_SimpleFunction('jscomments', [$this, 'twigFunctionJSComments'], ['is_safe' => ['html']])
-        );
-
-        $this->grav['twig']->twig()->addFunction(
-            new \Twig_SimpleFunction('jscomments_count', [$this, 'twigFunctionJSCommentsCount'], ['is_safe' => ['html']])
-        );
-
-        $this->grav['twig']->twig()->addFunction(
-            new \Twig_SimpleFunction('jscomments_validate_provider', [$this, 'twigFunctionJSCommentsValidateProvider'], ['is_safe' => ['html']])
-        );
-    }
-
-    /**
-     *
+     * Add current directory to twig lookup paths.
      */
     public function onTwigTemplatePaths()
     {
@@ -85,147 +81,33 @@ class JSCommentsPlugin extends Plugin
     }
 
     /**
+     * Add Twig Extensions
+     */
+    public function onTwigExtensions()
+    {
+        require_once(__DIR__.'/classes/Twig/JSCommentsTwigExtension.php');
+        $this->grav['twig']->twig->addExtension(new JSCommentsTwigExtension());
+    }
+
+    /**
+     * Admin
+     */
+
+    /**
+     * Extend page blueprints with JSComments configuration options.
+     *
      * @param Event $event
      */
     public function onBlueprintCreated(Event $event)
     {
-        static $inEvent = false;
-
         /** @var \Grav\Common\Data\Blueprint $blueprint */
         $blueprint = $event['blueprint'];
 
-        if (false === $inEvent and $blueprint->get('form/fields/tabs', null, '/')) {
-            $inEvent = true;
+        if ($blueprint->get('form/fields/tabs', null, '/')) {
             $blueprints = new Blueprints(__DIR__ . '/blueprints/');
             $extends = $blueprints->get('jscomments');
             $blueprint->extend($extends, true);
-            $inEvent = false;
         }
-    }
-
-    /**
-     * @param null|string $provider
-     * @param array $params
-     * @return string
-     */
-    public function twigFunctionJSComments($provider = null, $params = [])
-    {
-        // Load page object.
-        $page = $this->grav['page'];
-
-        // Validate presence of header value
-        if (false === $this->validateHeader($page->header()) and null === $provider) {
-            return '';
-        }
-
-        // Load config.
-        $config = $this->mergeConfig($page);
-
-        $provider = (null === $provider) ? $config->get('provider') : $provider;
-
-        if (false === $this->validateProvider($provider, $page)) {
-            return '';
-        }
-
-        $template_file = $this->getTemplatePath($provider);
-        $template_vars = array_merge($this->getProviderOptions($provider), $params, [
-            'page' => $page
-        ]);
-
-        return $this->grav['twig']->processTemplate($template_file, $template_vars);
-    }
-
-    /**
-     * @param null $shortname
-     * @return string
-     */
-    public function twigFunctionJSCommentsCount($shortname = null)
-    {
-        $page = $this->grav['page'];
-
-        // Validate presence of header value
-        if (false === $this->validateHeader($page->header())) {
-            return '';
-        }
-
-        // Merge site config with page config.
-        $config = $this->mergeConfig($page);
-
-        // Break if the provider is not disqus
-        if ('disqus' !== $config->get('provider')) {
-            return '';
-        }
-
-        $shortname = (null === $shortname) ? $config->get('providers.disqus.shortname') : $shortname;
-
-        $template_file = $this->getTemplatePath('disqus_count');
-        $template_vars = [
-            'shortname' => $shortname
-        ];
-
-        $output = $this->grav['twig']->processTemplate($template_file, $template_vars);
-
-        return $output;
-    }
-
-    /**
-     * @param string $provider
-     * @return bool
-     */
-    public function twigFunctionJSCommentsValidateProvider($provider)
-    {
-        // Validate presence of header value
-        if (false === $this->validateHeader($this->grav['page']->header())) {
-            return '';
-        }
-
-        return $this->validateProvider($provider, $this->grav['page']);
-    }
-
-    /**
-     * @param object $header
-     * @return bool
-     */
-    private function validateHeader($header)
-    {
-        return isset($header->jscomments);
-    }
-
-    /**
-     * @param string $provider
-     * @param Page $page
-     * @return bool
-     */
-    private function validateProvider($provider, Page $page)
-    {
-        $config = $this->mergeConfig($page);
-
-        return array_key_exists($provider, $config->get('providers'));
-    }
-
-    /**
-     * @param string $name
-     * @return string
-     */
-    private function getTemplatePath($name)
-    {
-        return sprintf('plugins/jscomments/%s.html.twig', $name);
-    }
-
-    /**
-     * @param string $provider
-     * @param Page|null $page
-     * @return mixed
-     */
-    private function getProviderOptions($provider, Page $page = null)
-    {
-        $provider_key = sprintf('providers.%s', $provider);
-
-        $page = (null === $page) ? $this->grav['page'] : $page;
-
-        $config = $this->mergeConfig($page);
-
-        return $config->get($provider_key);
     }
 
     /**
@@ -239,11 +121,13 @@ class JSCommentsPlugin extends Plugin
         $grav = Grav::instance();
 
         $providers = [];
-        $keys = $grav['config']->get('plugins.jscomments.providers', []);
-
-        // Allow mult-language translations of Provider names
-        foreach ($keys as $key => $options) {
-            $providers[$key] = 'PLUGINS.JS_COMMENTS.PROVIDERS.' . strtoupper($key);
+        // Load all comment providers
+        $iterator = new \FilesystemIterator(__DIR__ . '/templates/plugins/jscomments');
+        foreach ($iterator as $object) {
+          if ($object->isFile()) {
+            $provider = $object->getBasename(TEMPLATE_EXT);
+            $providers[$provider] = 'PLUGINS.JS_COMMENTS.PROVIDERS.' . strtoupper($provider);
+          }
         }
 
         // Sort alphabetically using PHP's strnatcasecmp function
