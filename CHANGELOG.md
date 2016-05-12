@@ -1,3 +1,20 @@
+# v2.0.0
+## XX/XX/2016
+
+1. [](#new)
+  * Added `active` settings
+  * Added German translations
+  * Added more JSComments page settings
+  * Add support for Discourse [#2](https://github.com/Sommerregen/grav-plugin-jscomments/issues/2) & [#3](https://github.com/Sommerregen/grav-plugin-jscomments/pull/3) (Thanks to @openscript)
+2. [](#improved)
+  * Fixed strings, added help texts and broke out provider settings into tabs
+  * Update JS comment providers APIs according to their docs (**BC** !!!)
+  * Moved Disqus Counts settings into main Disqus admin page settings
+  * Refactored code (requires **Grav v1.1.0+**)
+  * Updated `README.md`
+3. [](#bugfix)
+  * Fixed [#1](https://github.com/Sommerregen/grav-plugin-jscomments/issues/1) (JScomments Not Working with Grav Beta)
+
 # v1.2.10
 ## 09/13/2015
 
@@ -16,14 +33,14 @@
 ## 09/13/2015
 
 1. [](#new)
-  * Added multi language support for facebook template, use this format ({grav_lang}\_{grav_lang|upper}). I'm not sure if this is the best way, but in most case working fine.
+  * Added multi language support for facebook template, use this format (`{grav_lang}_{grav_lang|upper}`). I'm not sure if this is the best way, but in most case working fine.
   * Added new param for facebook comments "order_by" configurable from page options or into page header. Default is "Social".
 2. [](#improved)
   * Update facebook widget to v2.4.
   * Change facebook param from "numposts" to "num_posts" for following the facebook comments param.
   * Change twig translation function to twig filter.
 3. [](#bugfix)
-  * Fixed CHANGELOG.md format.
+  * Fixed `CHANGELOG.md` format.
   * Clear code.
   * Added js escape into disqus template.
   * Added translation for muut template.
@@ -34,9 +51,9 @@
 ## 09/12/2015
 
 1. [](#new)
-  * Added languages.yaml for translations (_some useless but nice to have it <3_).
+  * Added `languages.yaml` for translations (_some useless but nice to have it <3_).
 2. [](#improved)
-  * Change how to working code into the header page for use into admin plugin options tab, read the README.md.
+  * Change how to working code into the header page for use into admin plugin options tab, read the `README.md`.
   * Refactoring plugin settings page into admin plugin.
 3. [](#bugfix)
   * Enabled plugin by default.
@@ -46,7 +63,7 @@
 ## 09/12/2015
 
 3. [](#bugfix)
-  * Change from onPageContentRaw event to onPageInitialized because not working very well with the cache system.
+  * Change from `onPageContentRaw` event to `onPageInitialized` because not working very well with the cache system.
 
 # v1.2.5
 ## 09/12/2015
@@ -69,13 +86,13 @@
 ## 02/04/2015
 
 3. [](#bugfix)
-  * Update Plugin::mergeConfig() problem.
+  * Update `Plugin::mergeConfig()` problem.
 
 # v1.2.2
 ## 02/04/2015
 
 2. [](#improved)
-  * Update blueprints.yaml.
+  * Update `blueprints.yaml`.
 
 # v1.2.1
 ## 01/10/2015
@@ -101,7 +118,7 @@
 1. [](#new)
   * Added CHANGELOG.md with partial changelog update, I update in the next release.
 3. [](#bugfix)
-  * Update the merge config with php function array_replace_recursive instead merge_array.
+  * Update the merge config with PHP function `array_replace_recursive` instead `merge_array`.
 
 # v1.1.0
 ## 12/06/2014
@@ -124,7 +141,7 @@
 
 1. [](#new)
   * Added Admin Plugin check.
-  * Added demo link into the blueprints.yaml.
+  * Added demo link into the `blueprints.yaml`.
 
 # v1.0.7
 ## 10/24/2014
