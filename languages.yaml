@@ -12,6 +12,11 @@ en:
               LABEL: Provider
         ENABLED:
           LABEL: Plugin status
+        DISCOURSE:
+          TITLE: Discourse Options
+          FIELDS:
+            URL:
+              LABEL: URL
         DISQUS:
           TITLE: Disqus Options
           FIELDS:
@@ -65,6 +70,8 @@ en:
               LABEL: Widget
             LANG:
               LABEL: Language
+    DISCOURSE:
+      NOSCRIPT: Please enable JavaScript to view the <a href="https://www.discourse.org/">comments powered by Discourse.</a>
     DISQUS:
       NOSCRIPT: Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
       COPYRIGHT: <a href="http://disqus.com" class="dsq-brlink">Blog Comments Powered by <span class="logo-disqus">Disqus</span></a>
