@@ -61,7 +61,7 @@ form:
               data-options@: '\Grav\Plugin\JSCommentsPlugin::getProviders'
               options:
                 '': PLUGINS.JS_COMMENTS.NONE_SELECTED
-              default:  ''
+              default: ''
               validate:
                 required: true
                 type: string
