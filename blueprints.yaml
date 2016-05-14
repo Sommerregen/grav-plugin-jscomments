@@ -71,7 +71,7 @@ form:
           title: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.TITLE
 
           fields:
-            providers.discourse.url:
+            providers.discourse.host:
               type: text
               label: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.FIELDS.HOST
               help: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.FIELDS.HOST_HELP
