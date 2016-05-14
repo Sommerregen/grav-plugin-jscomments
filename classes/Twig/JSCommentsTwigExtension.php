@@ -79,9 +79,8 @@ class JSCommentsTwigExtension extends \Twig_Extension
         }
 
         // Check against valid providers
-        $provider  = strtolower($provider);
-        $providers = JSCommentsPlugin::getProviders();
-        if (!isset($providers[$provider])) {
+        $provider = strtolower($provider);
+        if (!$this->funcJSCommentsHasProvider($provider)) {
             return '';
         }
 
@@ -124,7 +123,7 @@ class JSCommentsTwigExtension extends \Twig_Extension
      */
     public function funcJSCommentsGetProvider($provider = null)
     {
-        if ($this->funcJSCommentsGetProvider($provider)) {
+        if ($this->funcJSCommentsHasProvider($provider)) {
             $provider = strtolower($provider);
             $data = Grav::instance()['config']->get('plugins.jscomments.providers.' . $provider, []);
         } else {
@@ -157,7 +156,6 @@ class JSCommentsTwigExtension extends \Twig_Extension
 
                 if (isset($config[$key])) {
                     $value = $config[$key];
-
                     if ($value === '@default') {
                         $value = $default;
                     }
