@@ -110,6 +110,7 @@ en:
         HELP: 'Choose a comment system provider.'
 
         DISCOURSE:
+          TITLE: 'DISCOURSE'
           NOSCRIPT: 'Please enable JavaScript to view the <a href="https://www.discourse.org/">comments powered by Discourse.</a>'
           COPYRIGHT: '<a href="https://www.discourse.org/">Blog Comments powered by <span>Discourse</span>.</a>'
 
