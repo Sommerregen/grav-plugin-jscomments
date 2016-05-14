@@ -1,8 +1,11 @@
 # v2.0.0-beta.2
 ## 05/14/2016
 
+2. [](#improved)
+  * Minor code improvements
 3. [](#bugfix)
-  * Fixed [#4](https://github.com/Sommerregen/grav-plugin-jscomments/issues/4) (Beta Grav and Admin issues with translating Discourse Title tab)
+  * Fixed broken translation in admin plugin settings [#4](https://github.com/Sommerregen/grav-plugin-jscomments/issues/4) (Beta Grav and Admin issues with translating Discourse Title tab)
+  * Fixed `jscomments_get_provider` Twig function
 
 # v2.0.0-beta.1
 ## 05/12/2016
