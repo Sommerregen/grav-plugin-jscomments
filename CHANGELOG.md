@@ -1,5 +1,11 @@
-# v2.0.0
-## XX/XX/2016
+# v2.0.0-beta.2
+## 05/14/2016
+
+3. [](#bugfix)
+  * Fixed [#4](https://github.com/Sommerregen/grav-plugin-jscomments/issues/4) (Beta Grav and Admin issues with translating Discourse Title tab)
+
+# v2.0.0-beta.1
+## 05/12/2016
 
 1. [](#new)
   * Added `active` settings
