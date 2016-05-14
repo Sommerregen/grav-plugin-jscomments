@@ -39,7 +39,7 @@ Place the following line of code in the theme file or page (__you need to enable
 
 This code works best when placed within the content block of the page, just below the main `{{ page.content }}` tag. This will place it at the bottom of the page's content.
 
-Alternatively, pace this line anywhere you wish in your theme. Usually it is wrapped by an if condition, like
+Alternatively, place this line anywhere you wish in your theme. Usually it is wrapped by an if condition, like
 
 ```twig
 {% if config.plugins.jscomments.enabled %}
@@ -164,7 +164,7 @@ and what options are set for a specific provider,
 {% set provider_options = jscomments_get_provider('provider') %}
 ```
 
-If `jscomments_get_provider` is called with an unknown provider or with an empty parameter, then it returns instead a list of all available providers.
+If `jscomments_get_provider` is called with an unknown provider or with an empty parameter, then it returns a list of all available providers instead.
 
 ## Contributing
 
