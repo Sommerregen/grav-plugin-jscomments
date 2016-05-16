@@ -104,7 +104,7 @@ class JSCommentsPlugin extends Plugin
         $blueprint = $event['blueprint'];
 
         if ($blueprint->get('form/fields/tabs', null, '/')) {
-            $blueprints = new Blueprints(__DIR__ . '/blueprints/');
+            $blueprints = new Blueprints(__DIR__ . '/blueprints');
             $extends = $blueprints->get('jscomments');
             $blueprint->extend($extends, true);
         }

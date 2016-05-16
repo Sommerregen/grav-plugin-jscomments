@@ -63,9 +63,16 @@ class JSCommentsTwigExtension extends \Twig_Extension
         /** @var \Grav\Common\Page\Page $page */
         $page = $grav['page'];
 
+        $config['enabled'] = isset($params['enabled'])
+            ? $params['enabled']
+            : ($params ? true: $this->mergeConfig($page, 'enabled', $config['enabled']));
+
+        $config['active'] = isset($params['active'])
+            ? $params['active']
+            : ($params ? true : $this->mergeConfig($page, 'active', $config['active']));
+
         // Skip if page disables JSComments plugin
-        if (!$this->mergeConfig($page, 'enabled', $config['enabled'])
-            || !$this->mergeConfig($page, 'active', $config['active'])) {
+        if (!$config['enabled'] || !$config['active']) {
             return '';
         }
 
