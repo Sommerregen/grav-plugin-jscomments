@@ -1,3 +1,13 @@
+# v2.0.0-beta.3
+## 05/16/2016
+
+2. [](#improved)
+  * Added `rel="nofollow"` to comment provider links
+  * Use canonical links as page URL and raw route as page ID for comment providers (**BC**!!!)
+3. [](#bugfix)
+  * Fixed `jscomments` Twig function (passing variables is working now)
+  * Fixed broken comment pages by exposing the current page to Twig  
+
 # v2.0.0-beta.2
 ## 05/14/2016
 
