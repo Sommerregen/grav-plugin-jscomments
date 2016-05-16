@@ -78,7 +78,7 @@ class JSCommentsTwigExtension extends \Twig_Extension
 
         // Populate JScomments settings
         $vars = isset($page->header()->jscomments) ? $page->header()->jscomments : [];
-        $vars = array_replace_recursive($vars, $params);
+        $vars = array_replace_recursive($vars, $params, ['page' => $page]);
 
         // Validate presence of header value
         if (!$provider) {
