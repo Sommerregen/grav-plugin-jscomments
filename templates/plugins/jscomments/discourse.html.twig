@@ -13,7 +13,7 @@
   <script type="text/javascript">
     var DiscourseEmbed = {
       discourseUrl: '{{ host|e('js') }}',
-      discourseEmbedUrl: '{{ url|default(page.url(true))|e('js') }}'
+      discourseEmbedUrl: '{{ url|default(page.url(true, true))|e('js') }}'
     };
 
     (function() {

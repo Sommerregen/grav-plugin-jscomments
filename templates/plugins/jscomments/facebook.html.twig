@@ -21,5 +21,5 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
 
-  <div class="fb-comments" data-href="{{ url|default(page.url(true))|e('html_attr') }}" data-numposts="{{ num_posts|e('html_attr') }}" data-colorscheme="{{ colorscheme|e('html_attr') }}" data-order-by="{{ order_by|e('html_attr') }}" data-width="{{ width|e('html_attr') }}"></div>
+  <div class="fb-comments" data-href="{{ url|default(page.url(true, true))|e('html_attr') }}" data-numposts="{{ num_posts|e('html_attr') }}" data-colorscheme="{{ colorscheme|e('html_attr') }}" data-order-by="{{ order_by|e('html_attr') }}" data-width="{{ width|e('html_attr') }}"></div>
 </div>

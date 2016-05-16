@@ -19,8 +19,8 @@
         this.language        = '{{ language|default('en')|e('js') }}';
         this.shortname       = '{{ shortname|e('js') }}';
         this.page.title      = '{{ title|default(page.title)|e('js') }}';
-        this.page.url        = '{{ url|default(page.url(true))|e('js') }}';
-        this.page.identifier = '{{ id|default(page.url(true))|e('js') }}';
+        this.page.url        = '{{ url|default(page.url(true, true))|e('js') }}';
+        this.page.identifier = '{{ id|default(page.rawRoute()|md5)|e('js') }}';
     };
 
     (function() {
