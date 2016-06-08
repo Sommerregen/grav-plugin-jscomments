@@ -39,7 +39,7 @@ de:
             COUNT: 'Kommentarzähler anzeigen'
 
             DEFAULT_LANGUAGE: 'Sprache'
-            DEFAULT_LANGUAGE_HELP: 'Verwende dei eingestellte Sprache für das Disqus-Kommentarfeld.'
+            DEFAULT_LANGUAGE_HELP: 'Verwende die eingestellte Sprache für das Disqus-Kommentarfeld.'
 
         FACEBOOK:
           TITLE: 'Facebook'
@@ -67,10 +67,17 @@ de:
             WIDTH: 'Breite (px oder %)'
             WIDTH_HELP: 'Die Breite des Kommentar-Plugins auf der Webseite. Das kann ein Pixel-Wert oder ein prozentualer Wert sein (wie z.B. 100% für dynamische Breiten).'
 
+        GOOGLEPLUS:
+          TITLE: 'Google+'
+          FIELDS:
+            COUNT: 'Kommentarzähler anzeigen'
+            DEFAULT_LANGUAGE: 'Sprache'
+            DEFAULT_LANGUAGE_HELP: 'Verwende die eingestellte Sprache für Google+ Kommentare.'
+            WIDTH: 'Breite (px oder %)'
+            WIDTH_HELP: 'Die Breite des Kommentar-Plugins auf der Webseite. Das kann ein Pixel-Wert oder ein prozentualer Wert sein (wie z.B. 100% für dynamische Breiten).'
 
         INTENSEDEBATE:
           TITLE: 'IntenseDebate'
-
           FIELDS:
             ACCOUNT_NUMBER: 'Account Nummer'
             ACCOUNT_NUMBER_HELP: 'Dies ist deine IntenseDebate Blog Account-Nummer, die du nach dem Erstellen des Blog-Accounts vorfindest.'
@@ -78,6 +85,7 @@ de:
         MUUT:
           TITLE: 'Muut'
           COMMENTS: 'Kommentare'
+
           FIELDS:
             FORUM: 'Forum Name'
             CHANNEL: 'Kanal'
@@ -108,7 +116,6 @@ en:
       PROVIDERS:
         TITLE: 'Provider'
         HELP: 'Choose a comment system provider.'
-
         DISCOURSE:
           TITLE: 'Discourse'
           NOSCRIPT: 'Please enable JavaScript to view the <a href="https://www.discourse.org/" rel="nofollow">comments powered by Discourse.</a>'
@@ -158,9 +165,18 @@ en:
             WIDTH: 'Width (px or %)'
             WIDTH_HELP: 'The width of the comments plugin on the webpage. This can be either a pixel value or a percentage (such as 100%) for fluid width.'
 
+        GOOGLEPLUS:
+          TITLE: 'Google+'
+          FIELDS:
+            COUNT: 'Show comment count'
+            DEFAULT_LANGUAGE: 'Default language'
+            DEFAULT_LANGUAGE_HELP: 'Dynamically load Google+ comments in different languages on a per-page basis.'
+            WIDTH: 'Width (px or %)'
+            WIDTH_HELP: 'The width of the comments plugin on the webpage. This can be either a pixel value or a percentage (such as 100%) for fluid width.'
+
+
         INTENSEDEBATE:
           TITLE: 'IntenseDebate'
-
           FIELDS:
             ACCOUNT_NUMBER: 'Account number'
             ACCOUNT_NUMBER_HELP: 'This is your IntenseDebate blog account number, which is assigned when you create your account.'
@@ -168,6 +184,7 @@ en:
         MUUT:
           TITLE: 'Muut'
           COMMENTS: 'Comments'
+
           FIELDS:
             FORUM: 'Forum name'
             CHANNEL: 'Channel'

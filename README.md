@@ -89,6 +89,11 @@ providers:
     language: ''            # Language (e.g. 'en_US')
     width: '100%'           # Width (px or %)
 
+  googleplus:
+    show_count: false       # Show comment count
+    language: ''            # Default language (e.g. 'en')
+    width: '100%'           # Width (px or %)
+
   intensedebate:
     account_number: ''      # Account number
 

@@ -172,6 +172,38 @@ form:
               validate:
                 type: string
 
+        googleplus:
+          type: tab
+          title: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.TITLE
+
+          fields:
+            providers.googleplus.show_count:
+              type: toggle
+              label: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.COUNT
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool
+
+            providers.googleplus.language:
+              type: text
+              label: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.DEFAULT_LANGUAGE
+              help: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.DEFAULT_LANGUAGE_HELP
+              size: x-small
+              validate:
+                type: string
+
+            providers.googleplus.width:
+              type: text
+              size: x-small
+              label: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.WIDTH
+              help: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.WIDTH_HELP
+              validate:
+                type: string
+
         intensedebate:
           type: tab
           title: PLUGINS.JS_COMMENTS.PROVIDERS.INTENSEDEBATE.TITLE
