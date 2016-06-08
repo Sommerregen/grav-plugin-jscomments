@@ -196,6 +196,95 @@ en:
             WIDGET_HELP: 'Shows a message button on the bottom-right of the browser.'
             LANGUAGE: 'Language'
 
+# Romanian
+ro:
+  PLUGINS:
+    JS_COMMENTS:
+      PLUGIN_NAME: 'JSComments'
+      PLUGIN_STATUS: 'Stare Plugin'
+      PLUGIN_ACTIVE: 'Activă'
+      PLUGIN_ACTIVE_HELP: 'Această opțiune este folosită pentru a (de)activa acest modul pagină cu pagină.'
+      NONE_SELECTED: '- Nici una selectată -'
+      USE_DEFAULT: '- Folosește implicit -'
+
+      OVERRIDE:
+        PAGE_TITLE: 'Suprascrie titlul paginii'
+        PAGE_URL: 'Suprascrie URL-ul paginii'
+        PAGE_ID: 'Suprascrie ID-ul paginii'
+
+      PROVIDERS:
+        TITLE: 'Furnizor'
+        HELP: 'Alege un furnizor pentru comentarii.'
+
+        DISCOURSE:
+          TITLE: 'Discourse'
+          NOSCRIPT: 'Te rugăm să activezi JavaScript pentru a vizualiza comentariile <a href="https://www.discourse.org/" rel="nofollow"> prin Discourse.</a>'
+          COPYRIGHT: '<a href="https://www.discourse.org/" rel="nofollow">Comentarii furmizate de  <span>Discourse</span>.</a>'
+
+          FIELDS:
+            HOST: 'URL pentru Discourse'
+            HOST_HELP: 'URL-ul către sistemul de comentarii Discourse.'
+
+        DISQUS:
+          TITLE: 'Disqus'
+          NOSCRIPT: 'Te rugăm să activezi JavaScript pentru a vizualiza comentariile <a href="http://disqus.com/?ref_noscript" rel="nofollow"> furnizate prin Disqus.</a>'
+          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comentarii furmizate de <span class="logo-disqus">Disqus</span>.</a>'
+
+          FIELDS:
+            SHORTNAME: 'Numele forumului '
+            SHORTNAME_HELP: "Îi spune serviciului Disqus numele scurt al forumului, care este unicul identificator pentru site-ul tău înregistrat prin Disqus. Dacă nu este definit, comentariile Disqus nu vor fi încărcate."
+
+            COUNT: 'Arată numărul de comentarii'
+
+            DEFAULT_LANGUAGE: 'Limba implicită'
+            DEFAULT_LANGUAGE_HELP: 'Încarcă în mod dinamic limbile diferite pentru Disqus pagină cu pagină.'
+
+        FACEBOOK:
+          TITLE: 'Facebook'
+          FIELDS:
+            APPID: 'App ID'
+            APPID_HELP: 'ID-ul aplicației create cu Facebook Developers (https://developers.facebook.com/apps).'
+            LANGUAGE: 'Limba'
+            LANGUAGE_HELP: 'Ajustează limba modului de comentarii prin încărcarea unei versiuni localizate a Facebook SDK pentru JavaScript.'
+            NUM_POSTS: 'Numărul postărilor vizibile'
+            NUM_POSTS_HELP: 'Numărul de comentarii afișate în mod implicit.'
+            NUM_POSTS_APPEND: 'postări'
+            COLORSCHEME:
+              TITLE: 'Tematica culorii'
+              HELP: 'Tematica culorii ce poate fi folosită de modului de comentarii. Poate fi "Deschisă" sau "Închisă".'
+              OPTIONS:
+                LIGHT: 'Deschisă'
+                DARK: 'Închisă'
+            ORDER_BY:
+              TITLE: 'Ordonează după'
+              HELP: 'Ordinea folosită la afișarea comentariilor.'
+              OPTIONS:
+                SOCIAL: 'Social'
+                REVERSE_TIME: 'Inversează data'
+                TIME: 'Timp'
+            WIDTH: 'Lățime (px or %)'
+            WIDTH_HELP: 'Lățimea ocupată de modulul de comentarii pe pagina de internet. Aceasta poate fi exprimată în pixeli sau procentaj (de eg: 100%) pentru lătime fluidă.'
+
+        INTENSEDEBATE:
+          TITLE: 'IntenseDebate'
+
+          FIELDS:
+            ACCOUNT_NUMBER: 'Numărul contului'
+            ACCOUNT_NUMBER_HELP: 'Acesta este numărul contului tău de pe IntenseDebate pe care îl primești la crearea contului.'
+
+        MUUT:
+          TITLE: 'Muut'
+          COMMENTS: 'Comentarii'
+          FIELDS:
+            FORUM: 'Numele forumului'
+            CHANNEL: 'Canal'
+            SHOW_ONLINE: 'Araăă online'
+            SHOW_TITLE: 'Arată title'
+            UPLOAD: 'Permite încărcări'
+            SHARE: 'Arată butonul "Like"'
+            WIDGET: 'Widget pentru mesage'
+            WIDGET_HELP: 'Arată un buton pentru mesaj în partea dreapta-jos a browser-ului.'
+            LANGUAGE: 'Limba'
 # Italian
 it:
   PLUGINS:
