@@ -1,3 +1,10 @@
+# v2.0.0-beta.4
+## 06/08/2016
+
+1. [](#new)
+  * Added support for Google+ comments.
+  * Added Romanian language (#7)[https://github.com/Sommerregen/grav-plugin-jscomments/pull/7] (Thanks to (JohnMica)[https://github.com/JohnMica])
+
 # v2.0.0-beta.3
 ## 05/16/2016
 
