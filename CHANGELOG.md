@@ -1,3 +1,9 @@
+# v2.0.0-beta.5
+## 06/09/2016
+
+2. [](#improved)
+  * Add missing Romanian language strings [#8](https://github.com/Sommerregen/grav-plugin-jscomments/pull/8) (Thanks to [JohnMica](https://github.com/JohnMica))
+
 # v2.0.0-beta.4
 ## 06/08/2016
 
