@@ -264,6 +264,15 @@ ro:
                 TIME: 'Timp'
             WIDTH: 'Lățime (px or %)'
             WIDTH_HELP: 'Lățimea ocupată de modulul de comentarii pe pagina de internet. Aceasta poate fi exprimată în pixeli sau procentaj (de eg: 100%) pentru lătime fluidă.'
+        
+        GOOGLEPLUS:
+            TITLE: 'Google+'
+            FIELDS:
+              COUNT: 'Arată numărul comentariilor'
+              DEFAULT_LANGUAGE: 'Limba implicită'
+              DEFAULT_LANGUAGE_HELP: 'Încarcă în mod dinamic comentariile Google+ în limbi diferite pagină cu pagină.'
+              WIDTH: 'Lățime (px sau %)'
+              WIDTH_HELP: 'Lățimea ocupată de modulul de comentarii pe pagina de internet. Aceasta poate fi exprimată în pixeli sau procentaj (de eg: 100%) pentru lătime fluidă.'
 
         INTENSEDEBATE:
           TITLE: 'IntenseDebate'
@@ -278,11 +287,11 @@ ro:
           FIELDS:
             FORUM: 'Numele forumului'
             CHANNEL: 'Canal'
-            SHOW_ONLINE: 'Araăă online'
-            SHOW_TITLE: 'Arată title'
+            SHOW_ONLINE: 'Arată online'
+            SHOW_TITLE: 'Arată titlu'
             UPLOAD: 'Permite încărcări'
             SHARE: 'Arată butonul "Like"'
-            WIDGET: 'Widget pentru mesage'
+            WIDGET: 'Widget pentru mesaje'
             WIDGET_HELP: 'Arată un buton pentru mesaj în partea dreapta-jos a browser-ului.'
             LANGUAGE: 'Limba'
 # Italian
