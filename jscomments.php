@@ -1,16 +1,16 @@
 <?php
 /**
- * JSComments v2.0.0-beta.3
+ * JSComments v2.0.0-beta.5
  *
  * This plugin allows Grav to integrate comments into individual pages
- * from Discourse / Disqus / Facebook / IntenseDebate and Muut comments
- * system.
+ * from Discourse / Disqus / Facebook / Google+ / IntenseDebate and Muut
+ * comment systems.
  *
  * Dual licensed under the MIT or GPL Version 3 licenses, see LICENSE.
  * http://benjamin-regler.de/license/
  *
  * @package     JSComments
- * @version     2.0.0-beta.3
+ * @version     2.0.0-beta.5
  * @link        <https://github.com/sommerregen/grav-plugin-jscomments>
  * @author      Benjamin Regler <sommerregen@benjamin-regler.de>
  * @copyright   2016, Benjamin Regler
@@ -30,8 +30,8 @@ use Grav\Plugin\JSComments\Twig\JSCommentsTwigExtension;
  * Class JSCommentsPlugin
  *
  * This plugin allows Grav to integrate comments into individual pages
- * from Discourse / Disqus / Facebook / IntenseDebate and Muut comments
- * system.
+ * from Discourse / Disqus / Facebook / Google+ / IntenseDebate and Muut
+ * comment systems.
  *
  * @package Grav\Plugin
  */

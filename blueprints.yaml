@@ -1,7 +1,7 @@
 name: JSComments
 version: 2.0.0-beta.5
 testing: true
-description: "Add comments in your site with Discourse, Disqus, Facebook, IntenseDebate, and Muut comment system."
+description: "Add comments to your site with Discourse, Disqus, Facebook, Google+, IntenseDebate, and Muut comment systems."
 icon: comments-o
 author:
   name: Sommerregen

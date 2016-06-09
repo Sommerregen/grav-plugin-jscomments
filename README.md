@@ -2,7 +2,7 @@
 
 [![Release](https://img.shields.io/github/release/sommerregen/grav-plugin-jscomments.svg)][project] [![Issues](https://img.shields.io/github/issues/sommerregen/grav-plugin-jscomments.svg)][issues] [![Dual license](https://img.shields.io/badge/dual%20license-MIT%2FGPL-blue.svg)](LICENSE "License") <span style="float:right;">[![Flattr](https://api.flattr.com/button/flattr-badge-large.png)][flattr] [![PayPal](https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif)][paypal]</span>
 
-> `JSComments` is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Discourse / Disqus / Facebook / IntenseDebate and Muut comments system.
+> **JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Discourse / Disqus / Facebook / Google+ / IntenseDebate and Muut comment systems.
 
 ##### Table of Contents:
 
