@@ -1,6 +1,6 @@
 <?php
 /**
- * JSComments v2.0.0-beta.5
+ * JSComments v2.0.0
  *
  * This plugin allows Grav to integrate comments into individual pages
  * from Discourse / Disqus / Facebook / Google+ / IntenseDebate and Muut
@@ -10,7 +10,7 @@
  * http://benjamin-regler.de/license/
  *
  * @package     JSComments
- * @version     2.0.0-beta.5
+ * @version     2.0.0
  * @link        <https://github.com/sommerregen/grav-plugin-jscomments>
  * @author      Benjamin Regler <sommerregen@benjamin-regler.de>
  * @copyright   2016, Benjamin Regler
@@ -103,8 +103,8 @@ class JSCommentsPlugin extends Plugin
         /** @var \Grav\Common\Data\Blueprint $blueprint */
         $blueprint = $event['blueprint'];
 
-        if ($blueprint->get('form/fields/tabs', null, '/')) {
-            $blueprints = new Blueprints(__DIR__ . '/blueprints');
+        if ($blueprint->get('form/fields/tabs')) {
+            $blueprints = new Blueprints(__DIR__ . '/blueprints/');
             $extends = $blueprints->get('jscomments');
             $blueprint->extend($extends, true);
         }
@@ -113,7 +113,7 @@ class JSCommentsPlugin extends Plugin
     /**
      * Get installed JSComments provider
      *
-     * @return array An array of installed and available proivders.
+     * @return array An array of installed and available providers.
      */
     static public function getProviders()
     {

@@ -1,20 +1,15 @@
 name: JSComments
-version: 2.0.0-beta.5
-testing: true
+version: 2.0.0
 description: "Add comments to your site with Discourse, Disqus, Facebook, Google+, IntenseDebate, and Muut comment systems."
 icon: comments-o
 author:
   name: Sommerregen
   email: sommerregen@benjamin-regler.de
 homepage: https://github.com/sommerregen/grav-plugin-jscomments
-keywords: [jscomments, plugin, comments, services, discourse, disqus, facebook, intensedebate, muut]
+keywords: [jscomments, plugin, comments, services, discourse, disqus, facebook, google, intensedebate, muut]
 docs: https://github.com/sommerregen/grav-plugin-jscomments/blob/master/README.md
 bugs: https://github.com/sommerregen/grav-plugin-jscomments/issues
 license: MIT/GPL
-
-dependencies:
-  - name: grav
-    version: '~1.1'
 
 form:
   validation: strict
