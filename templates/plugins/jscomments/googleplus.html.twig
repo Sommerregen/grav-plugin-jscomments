@@ -1,0 +1,35 @@
+{#
+  Google+ Comments - Ready, set, code!
+
+   @see https://paulund.co.uk/add-google-comments-to-your-site
+ #}
+<div id="jscomments">
+  {% if not language and grav.language.enabled %}
+    {% set language = grav.language.getLanguage %}
+  {% endif %}
+
+  <style>
+    #jscomments div[id^='___comments_'] {
+      display: block !important;
+      width: {{ width|default('100%') }} !important;
+    }
+    #jscomments div[id^='___comments_'] iframe {
+      width: 100% !important;
+    }
+  </style>
+
+  <script src="https://apis.google.com/js/plusone.js">
+    {lang: '{{ language|default('en')|e('js') }}'}
+  </script>
+
+  {% if show_count %}
+    <div class="g-commentcount" data-href="{{ url|default(page.url(true, true))|e('html_attr') }}"></div>
+  {% endif %}
+
+  <div class="g-comments"
+    data-href="{{ url|default(page.url(true, true))|e('html_attr') }}"
+    data-width="{{ width|default('100%')|replace({'px':'','%':''})|e('html_attr') }}"
+    data-first_party_property="BLOGGER"
+    data-view_type="FILTERED_POSTMOD">
+  </div>
+</div>

@@ -2,28 +2,45 @@
 
 enabled: true               # Set to false to disable this plugin completely
 
-providers:
-  disqus:
-    shortname: ""
-    default_lang: en
+# Global and page specific configurations
 
-  intensedebate:
-    acct: ""
+active: true                # Option to (de-)activate this plugin on a per-page basis
+provider: ''                # Comment provider (one of the providers below)
+
+# Default options for JSComments configuration
+
+providers:
+  discourse:
+    host: ''                # The URL to the Discourse commenting system
+
+  disqus:
+    shortname: ''           # Forum shortname
+    show_count: false       # Show comment count
+    language: ''            # Default language (e.g. 'en')
 
   facebook:
-    appId: ""
-    lang: "en_US"
-    num_posts: 5
-    colorscheme: "light"
-    order_by: social
-    width: "100%"
+    app_id: ''              # App ID
+    num_posts: 5            # Number of visible posts
+    colorscheme: 'light'    # Color scheme (can be "light" or "dark")
+    order_by: 'social'      # The order to use when displaying comments.
+                            # ('social', 'reverse_time', 'time')
+    language: ''            # Language (e.g. 'en_US')
+    width: '100%'           # Width (px or %)
+
+  googleplus:
+    show_count: false       # Show comment count
+    language: ''            # Default language (e.g. 'en')
+    width: '100%'           # Width (px or %)
+
+  intensedebate:
+    account_number: ''      # Account number
 
   muut:
-    forum: ""
-    channel: "General"
-    show_online: false
-    show_title: false
-    upload: false
-    share: true
-    widget: false
-    lang: "en"
+    forum: ''               # Forum name
+    channel: 'General'      # The name of the muut channel
+    widget: false           # Embed muut comments as a widget
+    show_online: false      # Show online users
+    show_title: false       # Show comment titles
+    upload: false           # Allow uploads
+    share: true             # Show share buttons
+    language: ''            # Default language (e.g. 'en')

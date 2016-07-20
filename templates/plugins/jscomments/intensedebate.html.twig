@@ -1,8 +1,14 @@
+{#
+    IntenseDebate - IntenseDebate is a feature-rich comment system for
+    WordPress, Blogger, Tumblr and many other blogging/CMS platforms.
+
+    @see https://support.intensedebate.com/generic-install/
+ #}
 <div id="jscomments">
     <script>
-        var idcomments_acct     = '{{ acct | e('js') }}';
-        var idcomments_post_id  = '{{ post_id | default(page.url(true)) | e('js') }}';
-        var idcomments_post_url = '{{ post_url | default(page.url(true)) | e('js') }}';
+        var idcomments_acct     = '{{ account_number|e('js') }}';
+        var idcomments_post_id  = '{{ id|default(page.rawRoute()|md5)|e('js') }}';
+        var idcomments_post_url = '{{ url|default(page.url(true, true))|e('js') }}';
     </script>
     <span id="IDCommentsPostTitle" style="display:none"></span>
     <script src="http://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>

@@ -1,0 +1,27 @@
+{#
+   Discourse - Civilized Discussion
+
+   @see https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963
+ #}
+<div id="jscomments">
+  <div id="discourse-comments"></div>
+
+  {% if not language and grav.language.enabled %}
+    {% set language = grav.language.getLanguage %}
+  {% endif %}
+
+  <script type="text/javascript">
+    var DiscourseEmbed = {
+      discourseUrl: '{{ host|e('js') }}',
+      discourseEmbedUrl: '{{ url|default(page.url(true, true))|e('js') }}'
+    };
+
+    (function() {
+      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+      d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+  </script>
+  <noscript>{{ 'PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.NOSCRIPT'|t }}</noscript>
+  {{ 'PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.COPYRIGHT'|t }}
+</div>
