@@ -1,3 +1,9 @@
+# v2.0.0
+## 07/20/2016
+
+2. [](#improved)
+  * Released stable version (requires **Grav v1.1.0+**)
+
 # v2.0.0-beta.5
 ## 06/09/2016
 
