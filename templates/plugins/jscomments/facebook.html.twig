@@ -16,7 +16,7 @@
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/{{ language|default('en_US')|e('js') }}/sdk.js#xfbml=1&amp;appId={{ app_id|e('js') }}&amp;version=v2.5";
+      js.src = "//connect.facebook.net/{{ language|default('en_US')|e('js') }}/all.js#xfbml=1&amp;appId={{ app_id|e('js') }}";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
