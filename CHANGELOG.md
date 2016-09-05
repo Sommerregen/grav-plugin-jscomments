@@ -1,3 +1,9 @@
+# v2.0.1
+## 09/05/2016
+
+3. [](#bugfix)
+  * Fixed [#9](https://github.com/Sommerregen/grav-plugin-jscomments/issues/9) (Uncaught Error: invalid version specified) with [#10](https://github.com/Sommerregen/grav-plugin-jscomments/pull/10) (Thanks to [@Perlkonig](https://github.com/Perlkonig))
+
 # v2.0.0
 ## 07/20/2016
 
