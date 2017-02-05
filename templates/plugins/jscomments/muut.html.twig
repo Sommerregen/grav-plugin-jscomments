@@ -14,7 +14,7 @@
         data-share="{{ share|e('html_attr') }}"
         data-widget="{{ widget|e('html_attr') }}"
         type="dynamic">
-        {{ 'PLUGIN_JSCOMMENTS.MUUT.COMMENTS'|t }}
+        {{ 'PLUGIN_JSCOMMENTS.MUUT.COMMENTS'|t|raw }}
     </a>
 
     {% if not language and grav.language.enabled %}
