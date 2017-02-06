@@ -2,7 +2,7 @@
 
 [![Release](https://img.shields.io/github/release/sommerregen/grav-plugin-jscomments.svg)][project] [![Issues](https://img.shields.io/github/issues/sommerregen/grav-plugin-jscomments.svg)][issues] [![Dual license](https://img.shields.io/badge/dual%20license-MIT%2FGPL-blue.svg)](LICENSE "License") <span style="float:right;">[![Flattr](https://api.flattr.com/button/flattr-badge-large.png)][flattr] [![PayPal](https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif)][paypal]</span>
 
-> **JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Discourse / Disqus / Facebook / Google+ / IntenseDebate and Muut comment systems.
+> **JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Discourse, Disqus, Facebook, Google+, IntenseDebate, and Muut comment systems.
 
 ##### Table of Contents:
 
@@ -15,7 +15,7 @@
 
 ## Installation and Updates
 
-Installing or updating the `JSComments` plugin can be done in one of two ways. Using the GPM (Grav Package Manager) installation update method (i.e. `bin/gpm install jscomments`) or manual install by downloading [this plugin](https://github.com/sommerregen/grav-plugin-jscomments) and extracting all plugin files to
+Installing or updating the `JSComments` plugin can be done in one of two ways. Using the GPM (Grav Package Manager) installation update method (i.e. `bin/gpm install jscomments`) or a manual install by downloading [this plugin](https://github.com/sommerregen/grav-plugin-jscomments) and extracting all plugin files to
 
     user/plugins/jscomments
 
@@ -25,25 +25,23 @@ For more informations, please check the [Installation and update guide](docs/INS
 
 ### Admin Plugin Setup
 
-If you use the **Admin plugin** you can choose the provider directly on the plugin settings page or page edit following the tab "Options" after Taxonomies.
+If you use the **Admin plugin** you can choose the provider directly from the plugin settings page or from the page edit tab called "Options".
 
-> **NOTE:** Remember prior to use this plugin you need to setup the provider settings in the plugin settings page.
+> **NOTE:** Before you can use the plugin, it is necessary setup the provider settings in the plugin settings page.
 
 ### Initial Setup
 
-Place the following line of code in the theme file or page (__you need to enable the Twig processing in the config before using Twig functions into the page__) you wish to add `JSComments` for:
+Place the following line of code in the theme file or page (__you need to enable the Twig processing in the configuration settings before Twig functions can be used in the page__) you wish to add `JSComments` for:
 
 ```twig
-{{ jscomments() }}
+{{ jscomments()|raw }}
 ```
 
-This code works best when placed within the content block of the page, just below the main `{{ page.content }}` tag. This will place it at the bottom of the page's content.
-
-Alternatively, place this line anywhere you wish in your theme. Usually it is wrapped by an if condition, like
+This code works best when placed within the content block of the page, just below the main `{{ page.content }}` tag. Alternatively, place this line anywhere you wish in your theme. Usually it is wrapped by an if condition, like
 
 ```twig
 {% if config.plugins.jscomments.enabled %}
-  {{ jscomments() }}
+  {{ jscomments()|raw }}
 {% endif %}
 ```
 
@@ -53,11 +51,11 @@ to take care of disabling any output, when the plugin is being disabled.
 
 ### Config Defaults
 
-You have the ability to set a number of variables that affect the `JSComments` plugin. These variables include `provider` used for identify the provider you want use. You can also more specifically refine the page ID, URL, and specifically disable comments for a specific page.
+You have the ability to set a number of variables that affect the `JSComments` plugin. These variables include the `provider` you want use. You can also define the page id and url and disable comments for a specific page.
 
-These options can exist in two places. Primarily, your user defaults will be set within the **jscomments.yaml** file in the `user/config/plugins/` directory. If you do not have a `user/config/plugins/` already, create the folder as it will enable you to change the default settings of the plugin without losing these updates in the event that the plugin is updated and/or reinstalled later on.
+These options can exist in two places. Primarily, your user defaults will be set within the **jscomments.yaml** file in the `user/config/plugins/` directory. If you do not have a `user/config/plugins/` already, create the folder as it will enable you to change the default settings of the plugin without losing them during an update or re-installation of the plugin.
 
-Here are the variables available:
+Here are the available variables:
 
 ```yaml
 # Global plugin configurations
@@ -108,9 +106,9 @@ providers:
     language: ''            # Default language (e.g. 'en')
 ```
 
-If you need to change any value, then the best process is to copy the [jscomments.yaml](jscomments.yaml) file into your `users/config/plugins/` folder (create it if it doesn't exist), and then modify there. This will override the default settings.
+If you need to change any value, then the best process is to copy the [jscomments.yaml](jscomments.yaml) file into your `users/config/plugins/` folder (create it if it doesn't exist) and modify it there. This will override the default settings.
 
-If you want to change any of these settings for a specific page you can do so via the page's header. Below is an example of how these settings can be used.
+If you want to change any of these settings for a specific page you can do so via the page header. Below is an example of how these settings can be used.
 
 ```yaml
 jscomments:
@@ -128,21 +126,21 @@ jscomments:
   active: true
 ```
 
-Or via Twig function:
+From Twig you can call `JSComments` as follows:
 
 ```twig
-{{ jscomments('provider_name', { param: value }) }}
+{{ jscomments('provider_name', { param: value })|raw }}
 ```
 
-Example for **Disqus** with minimum params:
+An example for **Disqus** with minimum parameters is shown below:
 
 ```twig
-{{ jscomments('disqus', { shortname: example }) }}
+{{ jscomments('disqus', { shortname: example })|raw }}
 ```
 
-For most users, only the `provider` option will need to be set. This will pull the comments settings from your account and pull information (such as the page title) from the page.
+For most users, only the `provider` option will need to be set. This will pull the comments settings from your account and the pull information (such as the page title) from the page.
 
-Further, `JSComments` allows you to use different commenting systems in one Grav install. You only have to set the `provider` option like
+Furthermore, `JSComments` allows you to use different commenting systems in one Grav install. You only have to set the `provider` option like
 
 ```yaml
 jscomments:
@@ -155,7 +153,7 @@ for a page or better a collection and all child pages will inherit this option.
 
 ### Twig Filter
 
-Furthermore, `JSComments` provides two more useful Twig functions. First, you can check whether a specific provider exists via
+In addition, `JSComments` provides two more useful Twig functions. First, you can check whether a specific provider exists via
 
 ```twig
 {% if jscomments_has_provider('provider') %}
