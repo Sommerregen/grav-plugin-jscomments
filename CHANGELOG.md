@@ -1,3 +1,10 @@
+# v2.0.2
+## 02/06/2017
+
+2. [](#improved)
+  * Use `raw` filter for translation strings (see [#15](https://github.com/Sommerregen/grav-plugin-jscomments/issues/15), Wrong output code)
+  * Updated `README.md` and corrected grammar
+
 # v2.0.1
 ## 09/05/2016
 
@@ -31,7 +38,7 @@
   * Use canonical links as page URL and raw route as page ID for comment providers (**BC**!!!)
 3. [](#bugfix)
   * Fixed `jscomments` Twig function (passing variables is working now)
-  * Fixed broken comment pages by exposing the current page to Twig  
+  * Fixed broken comment pages by exposing the current page to Twig
 
 # v2.0.0-beta.2
 ## 05/14/2016
