@@ -44,3 +44,8 @@ providers:
     upload: false           # Allow uploads
     share: true             # Show share buttons
     language: ''            # Default language (e.g. 'en')
+
+  hypercomments:
+    widget_id: '90285'      # The ID of your widget
+#    show_count: false       # Show comment count
+    social: 'vk, odnoklassniki, yandex, mailru, google, livejournal, facebook, twitter, tumblr' # The order and set of social networks.

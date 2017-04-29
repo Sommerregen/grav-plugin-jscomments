@@ -287,3 +287,33 @@ form:
               label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.LANGUAGE
               validate:
                 type: string
+
+        hypercomments:
+          type: tab
+          title: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.TITLE
+
+          fields:
+            providers.hypercomments.widget_id:
+              type: text
+              label: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.WIDGET_ID
+              size: x-small
+              validate:
+                type: int
+
+#            providers.hypercomments.show_count:
+#              type: toggle
+#              label: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SHOW_COUNT
+#              highlight: 1
+#              default: 0
+#              options:
+#                1: PLUGIN_ADMIN.YES
+#                0: PLUGIN_ADMIN.NO
+#              validate:
+#                type: bool
+
+            providers.hypercomments.social:
+              type: text
+              label: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL
+              help: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL_HELP
+              validate:
+                type: string

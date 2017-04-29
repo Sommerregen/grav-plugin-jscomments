@@ -1,3 +1,10 @@
+# v2.0.3
+## 04/29/2017
+
+1. [](#new)
+  * Added support for HyperComments comments.
+  * Added Russian language
+
 # v2.0.2
 ## 02/06/2017
 
