@@ -16,6 +16,7 @@ de:
 
       PROVIDERS:
         TITLE: 'Provider'
+        TITLE_SETTINGS: 'Provider-Einstellungen'
         HELP: 'Wähle ein Kommentarsystem-Dienst.'
 
         DISCOURSE:
@@ -125,6 +126,7 @@ en:
 
       PROVIDERS:
         TITLE: 'Provider'
+        TITLE_SETTINGS: 'Provider settings'
         HELP: 'Choose a comment system provider.'
         DISCOURSE:
           TITLE: 'Discourse'
@@ -234,6 +236,7 @@ ro:
 
       PROVIDERS:
         TITLE: 'Furnizor'
+        TITLE_SETTINGS: 'Setările furnizorului'
         HELP: 'Alege un furnizor pentru comentarii.'
 
         DISCOURSE:
@@ -334,6 +337,7 @@ it:
 
       PROVIDERS:
         TITLE: 'Provider'
+        TITLE_SETTINGS: 'Impostazioni provider'
 
         DISQUS:
           TITLE: 'Disqus'
@@ -407,6 +411,7 @@ ru:
 
       PROVIDERS:
         TITLE: 'Поставщик'
+        TITLE_SETTINGS: 'Параметры поставщиков'
         HELP: 'Выберите поставщика системы комментариев.'
         DISCOURSE:
           TITLE: 'Discourse'

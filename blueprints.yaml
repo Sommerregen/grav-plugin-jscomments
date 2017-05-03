@@ -62,250 +62,250 @@ form:
                 type: string
         params:
           type: tab
-          title: PLUGINS.JS_COMMENTS.PROVIDERS.TITLE
+          title: PLUGINS.JS_COMMENTS.PROVIDERS.TITLE_SETTINGS
+          fields:
+            discourse:
+              type: section
+              title: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.TITLE
 
-          discourse:
-            type: section
-            title: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.TITLE
+              fields:
+                providers.discourse.host:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.FIELDS.HOST
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.FIELDS.HOST_HELP
+                  validate:
+                    type: string
 
-            fields:
-              providers.discourse.host:
-                type: text
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.FIELDS.HOST
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.FIELDS.HOST_HELP
-                validate:
-                  type: string
+            disqus:
+              type: section
+              title: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.TITLE
 
-          disqus:
-            type: section
-            title: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.TITLE
+              fields:
+                providers.disqus.shortname:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.SHORTNAME
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.SHORTNAME_HELP
+                  validate:
+                    type: string
 
-            fields:
-              providers.disqus.shortname:
-                type: text
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.SHORTNAME
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.SHORTNAME_HELP
-                validate:
-                  type: string
+                providers.disqus.show_count:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.COUNT
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
 
-              providers.disqus.show_count:
-                type: toggle
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.COUNT
-                highlight: 1
-                default: 0
-                options:
-                  1: PLUGIN_ADMIN.YES
-                  0: PLUGIN_ADMIN.NO
-                validate:
-                  type: bool
+                providers.disqus.language:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.DEFAULT_LANGUAGE
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.DEFAULT_LANGUAGE_HELP
+                  size: x-small
+                  validate:
+                    type: string
 
-              providers.disqus.language:
-                type: text
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.DEFAULT_LANGUAGE
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.DEFAULT_LANGUAGE_HELP
-                size: x-small
-                validate:
-                  type: string
+            facebook:
+              type: section
+              title: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.TITLE
 
-          facebook:
-            type: section
-            title: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.TITLE
+              fields:
+                providers.facebook.app_id:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.APPID
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.APPID_HELP
+                  validate:
+                    type: string
 
-            fields:
-              providers.facebook.app_id:
-                type: text
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.APPID
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.APPID_HELP
-                validate:
-                  type: string
+                providers.facebook.num_posts:
+                  type: text
+                  size: x-small
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.NUM_POSTS
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.NUM_POSTS_HELP
+                  append: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.NUM_POSTS_APPEND
+                  validate:
+                    type: int
+                    min: 1
 
-              providers.facebook.num_posts:
-                type: text
-                size: x-small
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.NUM_POSTS
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.NUM_POSTS_HELP
-                append: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.NUM_POSTS_APPEND
-                validate:
-                  type: int
-                  min: 1
+                providers.facebook.colorscheme:
+                  type: select
+                  size: medium
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.TITLE
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.HELP
+                  default: light
+                  options:
+                    light: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.OPTIONS.LIGHT
+                    dark: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.OPTIONS.DARK
+                  validate:
+                    type: string
 
-              providers.facebook.colorscheme:
-                type: select
-                size: medium
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.TITLE
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.HELP
-                default: light
-                options:
-                  light: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.OPTIONS.LIGHT
-                  dark: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.OPTIONS.DARK
-                validate:
-                  type: string
+                providers.facebook.order_by:
+                  type: select
+                  size: medium
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.TITLE
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.HELP
+                  default: social
+                  options:
+                    social: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.SOCIAL
+                    reverse_time: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.REVERSE_TIME
+                    time: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.TIME
+                  validate:
+                    type: string
 
-              providers.facebook.order_by:
-                type: select
-                size: medium
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.TITLE
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.HELP
-                default: social
-                options:
-                  social: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.SOCIAL
-                  reverse_time: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.REVERSE_TIME
-                  time: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.TIME
-                validate:
-                  type: string
+                providers.facebook.language:
+                  type: text
+                  size: x-small
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.LANGUAGE
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.LANGUAGE_HELP
+                  validate:
+                    type: string
 
-              providers.facebook.language:
-                type: text
-                size: x-small
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.LANGUAGE
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.LANGUAGE_HELP
-                validate:
-                  type: string
+                providers.facebook.width:
+                  type: text
+                  size: x-small
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.WIDTH
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.WIDTH_HELP
+                  validate:
+                    type: string
 
-              providers.facebook.width:
-                type: text
-                size: x-small
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.WIDTH
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.WIDTH_HELP
-                validate:
-                  type: string
+            googleplus:
+              type: section
+              title: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.TITLE
 
-          googleplus:
-            type: section
-            title: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.TITLE
+              fields:
+                providers.googleplus.show_count:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.COUNT
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
 
-            fields:
-              providers.googleplus.show_count:
-                type: toggle
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.COUNT
-                highlight: 1
-                default: 0
-                options:
-                  1: PLUGIN_ADMIN.YES
-                  0: PLUGIN_ADMIN.NO
-                validate:
-                  type: bool
+                providers.googleplus.language:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.DEFAULT_LANGUAGE
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.DEFAULT_LANGUAGE_HELP
+                  size: x-small
+                  validate:
+                    type: string
 
-              providers.googleplus.language:
-                type: text
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.DEFAULT_LANGUAGE
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.DEFAULT_LANGUAGE_HELP
-                size: x-small
-                validate:
-                  type: string
+                providers.googleplus.width:
+                  type: text
+                  size: x-small
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.WIDTH
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.WIDTH_HELP
+                  validate:
+                    type: string
 
-              providers.googleplus.width:
-                type: text
-                size: x-small
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.WIDTH
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.WIDTH_HELP
-                validate:
-                  type: string
+            intensedebate:
+              type: section
+              title: PLUGINS.JS_COMMENTS.PROVIDERS.INTENSEDEBATE.TITLE
 
-          intensedebate:
-            type: section
-            title: PLUGINS.JS_COMMENTS.PROVIDERS.INTENSEDEBATE.TITLE
+              fields:
+                providers.intensedebate.account_number:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.INTENSEDEBATE.FIELDS.ACCOUNT_NUMBER
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.INTENSEDEBATE.FIELDS.ACCOUNT_NUMBER_HELP
+                  validate:
+                    type: string
 
-            fields:
-              providers.intensedebate.account_number:
-                type: text
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.INTENSEDEBATE.FIELDS.ACCOUNT_NUMBER
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.INTENSEDEBATE.FIELDS.ACCOUNT_NUMBER_HELP
-                validate:
-                  type: string
+            muut:
+              type: section
+              title: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.TITLE
 
-          muut:
-            type: section
-            title: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.TITLE
+              fields:
+                providers.muut.forum:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.FORUM
+                  validate:
+                    type: string
 
-            fields:
-              providers.muut.forum:
-                type: text
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.FORUM
-                validate:
-                  type: string
+                providers.muut.channel:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.CHANNEL
+                  validate:
+                    type: string
 
-              providers.muut.channel:
-                type: text
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.CHANNEL
-                validate:
-                  type: string
+                providers.muut.widget:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.WIDGET
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.WIDGET_HELP
+                  highlight: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
 
-              providers.muut.widget:
-                type: toggle
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.WIDGET
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.WIDGET_HELP
-                highlight: 1
-                options:
-                  1: PLUGIN_ADMIN.ENABLED
-                  0: PLUGIN_ADMIN.DISABLED
-                validate:
-                  type: bool
+                providers.muut.show_online:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.SHOW_ONLINE
+                  highlight: 1
+                  default: 1
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
 
-              providers.muut.show_online:
-                type: toggle
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.SHOW_ONLINE
-                highlight: 1
-                default: 1
-                options:
-                  1: PLUGIN_ADMIN.YES
-                  0: PLUGIN_ADMIN.NO
-                validate:
-                  type: bool
+                providers.muut.show_title:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.SHOW_TITLE
+                  highlight: 1
+                  default: 1
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
 
-              providers.muut.show_title:
-                type: toggle
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.SHOW_TITLE
-                highlight: 1
-                default: 1
-                options:
-                  1: PLUGIN_ADMIN.YES
-                  0: PLUGIN_ADMIN.NO
-                validate:
-                  type: bool
+                providers.muut.upload:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.UPLOAD
+                  highlight: 1
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
 
-              providers.muut.upload:
-                type: toggle
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.UPLOAD
-                highlight: 1
-                options:
-                  1: PLUGIN_ADMIN.YES
-                  0: PLUGIN_ADMIN.NO
-                validate:
-                  type: bool
+                providers.muut.share:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.SHARE
+                  highlight: 1
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
 
-              providers.muut.share:
-                type: toggle
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.SHARE
-                highlight: 1
-                options:
-                  1: PLUGIN_ADMIN.YES
-                  0: PLUGIN_ADMIN.NO
-                validate:
-                  type: bool
+                providers.muut.language:
+                  type: text
+                  size: x-small
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.LANGUAGE
+                  validate:
+                    type: string
 
-              providers.muut.language:
-                type: text
-                size: x-small
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.LANGUAGE
-                validate:
-                  type: string
+            hypercomments:
+              type: section
+              title: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.TITLE
 
-          hypercomments:
-            type: section
-            title: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.TITLE
+              fields:
+                providers.hypercomments.widget_id:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.WIDGET_ID
+                  size: x-small
+                  validate:
+                    type: int
 
-            fields:
-              providers.hypercomments.widget_id:
-                type: text
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.WIDGET_ID
-                size: x-small
-                validate:
-                  type: int
-
-              providers.hypercomments.social:
-                type: text
-                label: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL
-                help: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL_HELP
-                validate:
-                  type: string
+                providers.hypercomments.social:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL_HELP
+                  validate:
+                    type: string
