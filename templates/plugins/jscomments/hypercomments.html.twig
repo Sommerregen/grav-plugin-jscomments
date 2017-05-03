@@ -15,8 +15,10 @@
             social: '{{ social|e('js') }}'
         });
         (function () {
-            if ("HC_LOAD_INIT" in window)return;
-            HC_LOAD_INIT = true;
+            if ("HC_LOAD_INIT" in window) {
+                return
+            }
+            window.HC_LOAD_INIT = true;
             var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
             var hcc = document.createElement("script");
             hcc.type = "text/javascript";
