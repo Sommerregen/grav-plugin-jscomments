@@ -2,7 +2,7 @@
 
 [![Release](https://img.shields.io/github/release/sommerregen/grav-plugin-jscomments.svg)][project] [![Issues](https://img.shields.io/github/issues/sommerregen/grav-plugin-jscomments.svg)][issues] [![Dual license](https://img.shields.io/badge/dual%20license-MIT%2FGPL-blue.svg)](LICENSE "License") <span style="float:right;">[![Flattr](https://api.flattr.com/button/flattr-badge-large.png)][flattr] [![PayPal](https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif)][paypal]</span>
 
-> **JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Discourse, Disqus, Facebook, Google+, IntenseDebate, and Muut comment systems.
+> **JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Discourse, Disqus, Facebook, Google+, HyperComments, IntenseDebate, and Muut comment systems.
 
 ##### Table of Contents:
 
@@ -104,6 +104,19 @@ providers:
     upload: false           # Allow uploads
     share: true             # Show share buttons
     language: ''            # Default language (e.g. 'en')
+
+  hypercomments:
+    widget_id:              # The ID of your widget
+    social:                 # The order and set of social networks.
+      - 'vk'
+      - 'odnoklassniki'
+      - 'yandex'
+      - 'mailru'
+      - 'google'
+      - 'livejournal'
+      - 'facebook'
+      - 'twitter'
+      - 'tumblr'
 ```
 
 If you need to change any value, then the best process is to copy the [jscomments.yaml](jscomments.yaml) file into your `users/config/plugins/` folder (create it if it doesn't exist) and modify it there. This will override the default settings.
@@ -187,7 +200,7 @@ Thanks!
 
 ## License
 
-Copyright (c) 2016 [Benjamin Regler][github]. See also the list of [contributors] who participated in this project.
+Copyright (c) 2017+ [Benjamin Regler][github]. See also the list of [contributors] who participated in this project.
 
 [Dual-licensed](LICENSE) for use under the terms of the [MIT][mit-license] or [GPLv3][gpl-license] licenses.
 

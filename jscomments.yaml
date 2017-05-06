@@ -46,6 +46,14 @@ providers:
     language: ''            # Default language (e.g. 'en')
 
   hypercomments:
-    widget_id: 0            # The ID of your widget
-#    show_count: false       # Show comment count
-    social: 'vk, odnoklassniki, yandex, mailru, google, livejournal, facebook, twitter, tumblr' # The order and set of social networks.
+    widget_id:              # The ID of your widget
+    social:                 # The order and set of social networks.
+      - 'vk'
+      - 'odnoklassniki'
+      - 'yandex'
+      - 'mailru'
+      - 'google'
+      - 'livejournal'
+      - 'facebook'
+      - 'twitter'
+      - 'tumblr'
