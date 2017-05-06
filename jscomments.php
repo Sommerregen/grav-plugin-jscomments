@@ -1,6 +1,6 @@
 <?php
 /**
- * JSComments v2.0.2
+ * JSComments v2.1.0
  *
  * This plugin allows Grav to integrate comments into individual pages
  * from Discourse / Disqus / Facebook / Google+ / IntenseDebate and Muut
@@ -10,10 +10,10 @@
  * http://benjamin-regler.de/license/
  *
  * @package     JSComments
- * @version     2.0.2
+ * @version     2.1.0
  * @link        <https://github.com/sommerregen/grav-plugin-jscomments>
  * @author      Benjamin Regler <sommerregen@benjamin-regler.de>
- * @copyright   2016, Benjamin Regler
+ * @copyright   2017+, Benjamin Regler
  * @license     <http://opensource.org/licenses/MIT>        MIT
  * @license     <http://opensource.org/licenses/GPL-3.0>    GPLv3
  */

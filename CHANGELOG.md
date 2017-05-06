@@ -1,9 +1,11 @@
-# v2.0.3
-## 04/29/2017
+# v2.1.0
+## 05/XX/2017
 
 1. [](#new)
-  * Added support for HyperComments comments.
-  * Added Russian language
+  * Added Russian language and support for HyperComments comments [#18](https://github.com/Sommerregen/grav-plugin-jscomments/pull/18) (Thanks to [@Neiromaster](https://github.com/Neiromaster))
+2. [](#improved)
+  * Added some comment provider placeholder values
+  * Refactored comment providers in sections again
 
 # v2.0.2
 ## 02/06/2017
