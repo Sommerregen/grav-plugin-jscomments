@@ -1,15 +1,15 @@
-name: JSComments
-version: 2.0.2
-description: "Add comments to your site with Discourse, Disqus, Facebook, Google+, IntenseDebate, and Muut comment systems."
-icon: comments-o
+name: "JSComments"
+version: "2.1.0"
+description: "Add comments to your site with Discourse, Disqus, Facebook, Google+, HyperComments, IntenseDebate, and Muut comment systems."
+icon: "comments-o"
 author:
-  name: Sommerregen
-  email: sommerregen@benjamin-regler.de
-homepage: https://github.com/sommerregen/grav-plugin-jscomments
-keywords: [jscomments, plugin, comments, services, discourse, disqus, facebook, google, intensedebate, muut]
-docs: https://github.com/sommerregen/grav-plugin-jscomments/blob/master/README.md
-bugs: https://github.com/sommerregen/grav-plugin-jscomments/issues
-license: MIT/GPL
+  name: "Sommerregen"
+  email: "sommerregen@benjamin-regler.de"
+homepage: "https://github.com/sommerregen/grav-plugin-jscomments"
+keywords: ["jscomments", "plugin", "comments", "services", "discourse", "disqus", "facebook", "google", "hypercomments", "intensedebate", "muut"]
+docs: "https://github.com/sommerregen/grav-plugin-jscomments/blob/master/README.md"
+bugs: "https://github.com/sommerregen/grav-plugin-jscomments/issues"
+license: "MIT/GPL"
 
 form:
   validation: strict
@@ -73,6 +73,7 @@ form:
                   type: text
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.FIELDS.HOST
                   help: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.FIELDS.HOST_HELP
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.FIELDS.HOST_PLACEHOLDER
                   validate:
                     type: string
 
@@ -85,6 +86,7 @@ form:
                   type: text
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.SHORTNAME
                   help: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.SHORTNAME_HELP
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.SHORTNAME_PLACEHOLDER
                   validate:
                     type: string
 
@@ -103,6 +105,7 @@ form:
                   type: text
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.DEFAULT_LANGUAGE
                   help: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.DEFAULT_LANGUAGE_HELP
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.DEFAULT_LANGUAGE_PLACEHOLDER
                   size: x-small
                   validate:
                     type: string
@@ -116,6 +119,7 @@ form:
                   type: text
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.APPID
                   help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.APPID_HELP
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.APPID_PLACEHOLDER
                   validate:
                     type: string
 
@@ -159,6 +163,7 @@ form:
                   size: x-small
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.LANGUAGE
                   help: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.LANGUAGE_HELP
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.LANGUAGE_PLACEHOLDER
                   validate:
                     type: string
 
@@ -190,6 +195,7 @@ form:
                   type: text
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.DEFAULT_LANGUAGE
                   help: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.DEFAULT_LANGUAGE_HELP
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.DEFAULT_LANGUAGE_PLACEHOLDER
                   size: x-small
                   validate:
                     type: string
@@ -222,12 +228,14 @@ form:
                 providers.muut.forum:
                   type: text
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.FORUM
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.FORUM_PLACEHOLDER
                   validate:
                     type: string
 
                 providers.muut.channel:
                   type: text
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.CHANNEL
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.CHANNEL_PLACEHOLDER
                   validate:
                     type: string
 
@@ -288,6 +296,7 @@ form:
                   type: text
                   size: x-small
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.LANGUAGE
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.LANGUAGE_PLACEHOLDER
                   validate:
                     type: string
 
@@ -304,8 +313,9 @@ form:
                     type: int
 
                 providers.hypercomments.social:
-                  type: text
+                  type: selectize
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL
                   help: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL_HELP
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL_PLACEHOLDER
                   validate:
-                    type: string
+                    type: commalist
