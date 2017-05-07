@@ -6,6 +6,7 @@ de:
       PLUGIN_STATUS: 'Plugin Status'
       PLUGIN_ACTIVE: 'Aktiv'
       PLUGIN_ACTIVE_HELP: 'Diese Option dient zur (De-)Aktivierung des Plugins auf Seiten-Ebene.'
+
       NONE_SELECTED: '- Nichts ausgewählt -'
       USE_DEFAULT: '- Standard -'
 
@@ -14,14 +15,17 @@ de:
         PAGE_URL: 'Überschreibe Seiten-URL'
         PAGE_ID: 'Überschreibe Seiten-ID'
 
+      POWERED_BY: 'Kommentare unterstützt von <span>%s</span>'
+
       PROVIDERS:
         TITLE: 'Provider'
+        TITLE_SETTINGS: 'Provider-Einstellungen'
         HELP: 'Wähle ein Kommentarsystem-Dienst.'
 
         DISCOURSE:
           TITLE: 'Discourse'
-          NOSCRIPT: 'Bitte aktivieren Sie JavaScript um <a href="https://www.discourse.org/" rel="nofollow">die Discourse-Kommentare anzuzeigen zu können.</a>'
-          COPYRIGHT: '<a href="https://www.discourse.org/" rel="nofollow">Kommentare unterstützt von <span>Discourse</span>.</a>'
+          NOSCRIPT: 'Bitte aktivieren Sie JavaScript um <a href="https://www.discourse.org/" rel="nofollow noopener noreferrer">die Discourse-Kommentare anzuzeigen zu können.</a>'
+          COPYRIGHT: '<a href="https://www.discourse.org/" rel="nofollow noopener noreferrer">Kommentare unterstützt von <span>Discourse</span>.</a>'
 
           FIELDS:
             HOST: 'Discourse-URL'
@@ -29,25 +33,29 @@ de:
 
         DISQUS:
           TITLE: 'Disqus'
-          NOSCRIPT: 'Bitte aktivieren Sie JavaScript um <a href="http://disqus.com/?ref_noscript" rel="nofollow">die Disqus-Kommentare anzuzeigen zu können.</a>'
-          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Kommentare unterstützt von <span class="logo-disqus">Disqus</span>.</a>'
+          NOSCRIPT: 'Bitte aktivieren Sie JavaScript um <a href="http://disqus.com/?ref_noscript" rel="nofollow noopener noreferrer">die Disqus-Kommentare anzuzeigen zu können.</a>'
+          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink" rel="nofollow noopener noreferrer">Kommentare unterstützt von <span class="logo-disqus">Disqus</span>.</a>'
 
           FIELDS:
             SHORTNAME: 'Forum Kurzname'
             SHORTNAME_HELP: "Ermöglicht dem Disqus-Dienst deinen eindeutigen Forum Kurznamen zu laden. Falls undefiniert wird Disqus keine Kommentare laden."
+            SHORTNAME_PLACEHOLDER: 'z.B., getgrav'
 
             COUNT: 'Kommentarzähler anzeigen'
 
             DEFAULT_LANGUAGE: 'Sprache'
             DEFAULT_LANGUAGE_HELP: 'Verwende die eingestellte Sprache für das Disqus-Kommentarfeld.'
+            DEFAULT_LANGUAGE_PLACEHOLDER: 'de'
 
         FACEBOOK:
           TITLE: 'Facebook'
           FIELDS:
             APPID: 'App ID'
             APPID_HELP: 'Die App ID, die man von der Facebook Developers Seite erhält (https://developers.facebook.com/apps).'
+            APPID_PLACEHOLDER: '0123456789012345'
             LANGUAGE: 'Sprache'
             LANGUAGE_HELP: 'Passe die Sprache des Kommentar-Moduls an (lädt eine lokalisierte Version des Facebook SDK für JavaSkript).'
+            LANGUAGE_PLACEHOLDER: 'de_DE'
             NUM_POSTS: 'Anzahl Kommentare'
             NUM_POSTS_HELP: 'Die Anzahl an Kommentaren, die standardmäßig angezeigt werden.'
             NUM_POSTS_APPEND: 'Kommentare'
@@ -73,6 +81,7 @@ de:
             COUNT: 'Kommentarzähler anzeigen'
             DEFAULT_LANGUAGE: 'Sprache'
             DEFAULT_LANGUAGE_HELP: 'Verwende die eingestellte Sprache für Google+ Kommentare.'
+            DEFAULT_LANGUAGE_PLACEHOLDER: 'de'
             WIDTH: 'Breite (px oder %)'
             WIDTH_HELP: 'Die Breite des Kommentar-Plugins auf der Webseite. Das kann ein Pixel-Wert oder ein prozentualer Wert sein (wie z.B. 100% für dynamische Breiten).'
 
@@ -88,7 +97,9 @@ de:
 
           FIELDS:
             FORUM: 'Forum Name'
+            FORUM_PLACEHOLDER: 'z.B., getgrav'
             CHANNEL: 'Kanal'
+            CHANNEL_PLACEHOLDER: 'z.B., allgemein'
             SHOW_ONLINE: 'Online-User anzeigen'
             SHOW_TITLE: 'Titel anzeigen'
             UPLOAD: 'Uploads erlauben'
@@ -96,7 +107,19 @@ de:
             WIDGET: 'Nachrichten-Widget'
             WIDGET_HELP: 'Blendet ein Nachrichten-Button auf der unteren rechten Seite des Browsers ein.'
             LANGUAGE: 'Sprache'
+            LANGUAGE_PLACEHOLDER: 'de'
 
+        HYPERCOMMENTS:
+          TITLE: 'HyperComments'
+          COMMENTS: 'Kommentare'
+          COPYRIGHT: '<a href="http://hypercomments.com" rel="nofollow noopener noreferrer" class="hc-link" title="comments widget">Kommentare unterstützt von <span>HyperComments</span>.</a>'
+
+          FIELDS:
+            WIDGET_ID: 'Die ID deines Widgets'
+            SHOW_COUNT: 'Kommentarzähler anzeigen'
+            SOCIAL: 'Die Ordnung und die Menge der sozialen Netzwerke'
+            SOCIAL_HELP: 'Hiermit können Sie die Liste und die Reihenfolge der sozialen Netzwerke angeben, durch die die Genehmigung möglich ist. Der Wert der Berechtigungsanbieter wird über ein Komma angegeben, die Reihenfolge der Sozialnetzzuweisungen entspricht der Reihenfolge, in der sie im Widget angezeigt werden'
+            SOCIAL_PLACEHOLDER: 'z.B., vk, google, twitter, tumblr'
 # English
 en:
   PLUGINS:
@@ -105,6 +128,7 @@ en:
       PLUGIN_STATUS: 'Plugin status'
       PLUGIN_ACTIVE: 'Active'
       PLUGIN_ACTIVE_HELP: 'This option is used to (de-)activate this plugin on a per-page basis.'
+
       NONE_SELECTED: '- None selected -'
       USE_DEFAULT: '- Use default -'
 
@@ -113,39 +137,47 @@ en:
         PAGE_URL: 'Override page URL'
         PAGE_ID: 'Override page ID'
 
+      POWERED_BY: 'Comments powered by <span>%s</span>'
+
       PROVIDERS:
         TITLE: 'Provider'
+        TITLE_SETTINGS: 'Provider settings'
         HELP: 'Choose a comment system provider.'
         DISCOURSE:
           TITLE: 'Discourse'
-          NOSCRIPT: 'Please enable JavaScript to view the <a href="https://www.discourse.org/" rel="nofollow">comments powered by Discourse.</a>'
-          COPYRIGHT: '<a href="https://www.discourse.org/" rel="nofollow">Blog Comments powered by <span>Discourse</span>.</a>'
+          NOSCRIPT: 'Please enable JavaScript to view the <a href="https://www.discourse.org/" rel="nofollow noopener noreferrer">comments powered by Discourse.</a>'
+          COPYRIGHT: '<a href="https://www.discourse.org/" rel="nofollow noopener noreferrer">Blog Comments powered by <span>Discourse</span>.</a>'
 
           FIELDS:
             HOST: 'Discourse URL'
             HOST_HELP: 'The URL to the Discourse commenting system.'
+            HOST_PLACEHOLDER: 'http://discourse.example.com/'
 
         DISQUS:
           TITLE: 'Disqus'
-          NOSCRIPT: 'Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>'
-          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Blog Comments powered by <span class="logo-disqus">Disqus</span>.</a>'
+          NOSCRIPT: 'Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow noopener noreferrer">comments powered by Disqus.</a>'
+          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink" rel="nofollow noopener noreferrer">Blog Comments powered by <span class="logo-disqus">Disqus</span>.</a>'
 
           FIELDS:
             SHORTNAME: 'Forum shortname'
             SHORTNAME_HELP: "Tells the Disqus service your forum's shortname, which is the unique identifier for your website as registered on Disqus. If undefined, the Disqus embed will not load."
+            SHORTNAME_PLACEHOLDER: 'e.g., getgrav'
 
             COUNT: 'Show comment count'
 
             DEFAULT_LANGUAGE: 'Default language'
             DEFAULT_LANGUAGE_HELP: 'Dynamically load the Disqus embed in different languages on a per-page basis.'
+            DEFAULT_LANGUAGE_PLACEHOLDER: 'en'
 
         FACEBOOK:
           TITLE: 'Facebook'
           FIELDS:
             APPID: 'App ID'
             APPID_HELP: 'The App ID you get from the Facebook Developers page (https://developers.facebook.com/apps).'
+            APPID_PLACEHOLDER: '0123456789012345'
             LANGUAGE: 'Language'
             LANGUAGE_HELP: 'Adjust the language of the Comments plugin by loading a localized version of the Facebook SDK for JavaScript.'
+            LANGUAGE_PLACEHOLDER: 'en_EN'
             NUM_POSTS: 'Number of visible posts'
             NUM_POSTS_HELP: 'The number of comments to show by default.'
             NUM_POSTS_APPEND: 'posts'
@@ -171,6 +203,7 @@ en:
             COUNT: 'Show comment count'
             DEFAULT_LANGUAGE: 'Default language'
             DEFAULT_LANGUAGE_HELP: 'Dynamically load Google+ comments in different languages on a per-page basis.'
+            DEFAULT_LANGUAGE_PLACEHOLDER: 'en'
             WIDTH: 'Width (px or %)'
             WIDTH_HELP: 'The width of the comments plugin on the webpage. This can be either a pixel value or a percentage (such as 100%) for fluid width.'
 
@@ -187,7 +220,9 @@ en:
 
           FIELDS:
             FORUM: 'Forum name'
+            FORUM_PLACEHOLDER: 'e.g., getgrav'
             CHANNEL: 'Channel'
+            CHANNEL_PLACEHOLDER: 'e.g., general'
             SHOW_ONLINE: 'Show online'
             SHOW_TITLE: 'Show title'
             UPLOAD: 'Allow uploads'
@@ -195,6 +230,19 @@ en:
             WIDGET: 'Messages widget'
             WIDGET_HELP: 'Shows a message button on the bottom-right of the browser.'
             LANGUAGE: 'Language'
+            LANGUAGE_PLACEHOLDER: 'en'
+
+        HYPERCOMMENTS:
+          TITLE: 'HyperComments'
+          COMMENTS: 'Comments'
+          COPYRIGHT: '<a href="http://hypercomments.com" rel="nofollow noopener noreferrer" class="hc-link" title="comments widget">Blog Comments powered by <span>HyperComments</span>.</a>'
+
+          FIELDS:
+            WIDGET_ID: 'The ID of your widget'
+            SHOW_COUNT: 'Show comment counter'
+            SOCIAL: 'The order and set of social networks.'
+            SOCIAL_HELP: 'Allows you to specify the list and order of social networks through which authorization will be possible. The value of the authorization providers is specified via a comma, the order of the social network assignments corresponds to the order in which they are displayed in the widget'
+            SOCIAL_PLACEHOLDER: 'e.g., vk, google, twitter, tumblr'
 
 # Romanian
 ro:
@@ -214,12 +262,13 @@ ro:
 
       PROVIDERS:
         TITLE: 'Furnizor'
+        TITLE_SETTINGS: 'Setările furnizorului'
         HELP: 'Alege un furnizor pentru comentarii.'
 
         DISCOURSE:
           TITLE: 'Discourse'
-          NOSCRIPT: 'Te rugăm să activezi JavaScript pentru a vizualiza comentariile <a href="https://www.discourse.org/" rel="nofollow"> prin Discourse.</a>'
-          COPYRIGHT: '<a href="https://www.discourse.org/" rel="nofollow">Comentarii furmizate de  <span>Discourse</span>.</a>'
+          NOSCRIPT: 'Te rugăm să activezi JavaScript pentru a vizualiza comentariile <a href="https://www.discourse.org/" rel="nofollow noopener noreferrer"> prin Discourse.</a>'
+          COPYRIGHT: '<a href="https://www.discourse.org/" rel="nofollow noopener noreferrer">Comentarii furmizate de  <span>Discourse</span>.</a>'
 
           FIELDS:
             HOST: 'URL pentru Discourse'
@@ -227,8 +276,8 @@ ro:
 
         DISQUS:
           TITLE: 'Disqus'
-          NOSCRIPT: 'Te rugăm să activezi JavaScript pentru a vizualiza comentariile <a href="http://disqus.com/?ref_noscript" rel="nofollow"> furnizate prin Disqus.</a>'
-          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comentarii furmizate de <span class="logo-disqus">Disqus</span>.</a>'
+          NOSCRIPT: 'Te rugăm să activezi JavaScript pentru a vizualiza comentariile <a href="http://disqus.com/?ref_noscript" rel="nofollow noopener noreferrer"> furnizate prin Disqus.</a>'
+          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink" rel="nofollow noopener noreferrer">Comentarii furmizate de <span class="logo-disqus">Disqus</span>.</a>'
 
           FIELDS:
             SHORTNAME: 'Numele forumului '
@@ -264,7 +313,7 @@ ro:
                 TIME: 'Timp'
             WIDTH: 'Lățime (px or %)'
             WIDTH_HELP: 'Lățimea ocupată de modulul de comentarii pe pagina de internet. Aceasta poate fi exprimată în pixeli sau procentaj (de eg: 100%) pentru lătime fluidă.'
-        
+
         GOOGLEPLUS:
             TITLE: 'Google+'
             FIELDS:
@@ -294,6 +343,17 @@ ro:
             WIDGET: 'Widget pentru mesaje'
             WIDGET_HELP: 'Arată un buton pentru mesaj în partea dreapta-jos a browser-ului.'
             LANGUAGE: 'Limba'
+
+        HYPERCOMMENTS:
+          TITLE: 'HyperComments'
+          COMMENTS: 'Comentarii'
+
+          FIELDS:
+            WIDGET_ID: 'ID-ul widget-ului'
+            SHOW_COUNT: 'Afișați un contor de comentarii'
+            SOCIAL: 'Ordinea și setul de rețele sociale'
+            SOCIAL_HELP: 'Vă permite să specificați lista și ordinea rețelelor sociale prin care autorizarea va fi posibilă. Valoarea furnizorilor de autorizație este specificată printr-o virgulă, ordinea repartizării rețelei sociale corespunde ordinii în care acestea sunt afișate în widget-ul'
+
 # Italian
 it:
   PLUGINS:
@@ -303,11 +363,12 @@ it:
 
       PROVIDERS:
         TITLE: 'Provider'
+        TITLE_SETTINGS: 'Impostazioni provider'
 
         DISQUS:
           TITLE: 'Disqus'
-          NOSCRIPT: 'Per farvore abilita JavaScript per visualizzare <a href="http://disqus.com/?ref_noscript" rel="nofollow">i commenti offerto da Disqus.</a>'
-          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Commenti offerti da <span class="logo-disqus">Disqus</span></a>'
+          NOSCRIPT: 'Per farvore abilita JavaScript per visualizzare <a href="http://disqus.com/?ref_noscript" rel="nofollow noopener noreferrer">i commenti offerto da Disqus.</a>'
+          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink" rel="nofollow noopener noreferrer">Commenti offerti da <span class="logo-disqus">Disqus</span></a>'
 
           FIELDS:
             SHORTNAME: 'Shortname'
@@ -347,3 +408,124 @@ it:
             SHOW_TITLE: 'Visualizza titolo'
             WIDGET: 'Widget'
             LANGUAGE: 'Lingua'
+
+        HYPERCOMMENTS:
+          TITLE: 'HyperComments'
+          COMMENTS: 'Commenti'
+
+          FIELDS:
+            WIDGET_ID: "L'ID del tuo widget"
+            SHOW_COUNT: 'Mostra contatore commenti'
+            SOCIAL: "L'ordine e l'insieme delle reti sociali"
+            SOCIAL_HELP: "Consente di specificare l'elenco e l'ordine delle reti sociali attraverso le quali sarà possibile l'autorizzazione. Il valore dei provider di autorizzazioni viene specificato tramite una virgola, l'ordine delle assegnazioni della rete sociale corrisponde all'ordine in cui vengono visualizzati nel widget"
+
+# Russian
+ru:
+  PLUGINS:
+    JS_COMMENTS:
+      PLUGIN_NAME: 'JSComments'
+      PLUGIN_STATUS: 'Статус плагина'
+      PLUGIN_ACTIVE: 'Активный'
+      PLUGIN_ACTIVE_HELP: 'Эта опция используется для (де-)активации этого плагина для каждой страницы.'
+      NONE_SELECTED: '- Ничего не выбрано -'
+      USE_DEFAULT: '- Использовать по умолчанию -'
+
+      OVERRIDE:
+        PAGE_TITLE: 'Переопределить заголовок страницы'
+        PAGE_URL: 'Переопределить URL страницы'
+        PAGE_ID: 'Переопределить ID страницы'
+
+      PROVIDERS:
+        TITLE: 'Поставщик'
+        TITLE_SETTINGS: 'Параметры поставщиков'
+        HELP: 'Выберите поставщика системы комментариев.'
+        DISCOURSE:
+          TITLE: 'Discourse'
+          NOSCRIPT: 'Включите JavaScript, чтобы просмотреть <a href="https://www.discourse.org/" rel="nofollow noopener noreferrer">комментарии, основанные на Discourse.</a>'
+          COPYRIGHT: '<a href="https://www.discourse.org/" rel="nofollow noopener noreferrer">Blog Comments powered by <span>Discourse</span>.</a>'
+
+          FIELDS:
+            HOST: 'Discourse URL'
+            HOST_HELP: 'URL-адрес системы комментирования Discourse.'
+
+        DISQUS:
+          TITLE: 'Disqus'
+          NOSCRIPT: 'Включите JavaScript, чтобы просмотреть <a href="http://disqus.com/?ref_noscript" rel="nofollow noopener noreferrer">комментарии, основанные на Disqus.</a>'
+          COPYRIGHT: '<a href="http://disqus.com" class="dsq-brlink" rel="nofollow noopener noreferrer">Blog Comments powered by <span class="logo-disqus">Disqus</span>.</a>'
+
+          FIELDS:
+            SHORTNAME: 'Краткое название форума'
+            SHORTNAME_HELP: "Сообщает службе Disqus краткое имя вашего форума, которое является уникальным идентификатором вашего сайта, зарегистрированным на Disqus. Если не определено, Disqus embed не загружается."
+
+            COUNT: 'Показать количество комментариев'
+
+            DEFAULT_LANGUAGE: 'Язык по умолчанию'
+            DEFAULT_LANGUAGE_HELP: 'Динамически загружайте Disqus на разных языках для каждой страницы.'
+
+        FACEBOOK:
+          TITLE: 'Facebook'
+          FIELDS:
+            APPID: 'App ID'
+            APPID_HELP: 'Идентификатор приложения, который вы получаете на странице разработчиков Facebook (https://developers.facebook.com/apps).'
+            LANGUAGE: 'Язык'
+            LANGUAGE_HELP: 'Откорректируйте язык плагина комментариев, загрузив локализованную версию SDK Facebook для JavaScript.'
+            NUM_POSTS: 'Количество видимых сообщений'
+            NUM_POSTS_HELP: 'Количество комментариев для показа по умолчанию.'
+            NUM_POSTS_APPEND: 'posts'
+            COLORSCHEME:
+              TITLE: 'Цветовая схема'
+              HELP: 'Цветовая схема, используемая в плагине комментариев. Может быть "light" или "dark".'
+              OPTIONS:
+                LIGHT: 'Light'
+                DARK: 'Dark'
+            ORDER_BY:
+              TITLE: 'Сортировать по'
+              HELP: 'Порядок отображения комментариев.'
+              OPTIONS:
+                SOCIAL: 'Social'
+                REVERSE_TIME: 'Reverse time'
+                TIME: 'Time'
+            WIDTH: 'Ширина (px или %)'
+            WIDTH_HELP: 'Ширина плагина комментирования на веб-странице. Это может быть либо значение в пикселях, либо процент (например, 100%) от ширины контейнера.'
+
+        GOOGLEPLUS:
+          TITLE: 'Google+'
+          FIELDS:
+            COUNT: 'Показать количество комментариев'
+            DEFAULT_LANGUAGE: 'Язык по умолчанию'
+            DEFAULT_LANGUAGE_HELP: 'Динамически загружать комментарии Google+ на разных языках на странице.'
+            WIDTH: 'Ширина (px или %)'
+            WIDTH_HELP: 'Ширина плагина комментирования на веб-странице. Это может быть либо значение в пикселях, либо процент (например, 100%) от ширины контейнера.'
+
+
+        INTENSEDEBATE:
+          TITLE: 'IntenseDebate'
+          FIELDS:
+            ACCOUNT_NUMBER: 'Номер аккаунта'
+            ACCOUNT_NUMBER_HELP: 'Это ваш номер учетной записи блога IntenseDebate, который присваивается при создании вашей учетной записи.'
+
+        MUUT:
+          TITLE: 'Muut'
+          COMMENTS: 'Комментарии'
+
+          FIELDS:
+            FORUM: 'Имя на форуме'
+            CHANNEL: 'Канал'
+            SHOW_ONLINE: 'Показать online'
+            SHOW_TITLE: 'Показать заголовок'
+            UPLOAD: 'Разрешить загрузку'
+            SHARE: 'Показать кнопку «Нравится»'
+            WIDGET: 'Виджет сообщений'
+            WIDGET_HELP: 'Показывает кнопку сообщения в правом нижнем углу браузера.'
+            LANGUAGE: 'Язык'
+
+        HYPERCOMMENTS:
+          TITLE: 'HyperComments'
+          COMMENTS: 'Комментарии'
+
+          FIELDS:
+            WIDGET_ID: 'ID Вашего виджета'
+            SHOW_COUNT: 'Показать счетчик комментариев'
+            SOCIAL: 'Порядок и набор социальных сетей.'
+            SOCIAL_HELP: 'Позволяет задать перечень и порядок социальных сетей через которые будет возможна авторизация. Значение провайдеров авторизации задаются через запятую, порядок задания соц.сетей соответствует порядку их отображения в виджете.'
+            SOCIAL_PLACEHOLDER: 'например: vk, google, twitter, tumblr'

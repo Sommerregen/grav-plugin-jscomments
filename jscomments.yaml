@@ -44,3 +44,16 @@ providers:
     upload: false           # Allow uploads
     share: true             # Show share buttons
     language: ''            # Default language (e.g. 'en')
+
+  hypercomments:
+    widget_id:              # The ID of your widget
+    social:                 # The order and set of social networks.
+      - 'vk'
+      - 'odnoklassniki'
+      - 'yandex'
+      - 'mailru'
+      - 'google'
+      - 'livejournal'
+      - 'facebook'
+      - 'twitter'
+      - 'tumblr'
