@@ -1,3 +1,9 @@
+# v2.1.1
+## 07/21/2017
+
+3. [](#bugfix)
+  * Fixed broken language string in Muut comments
+
 # v2.1.0
 ## 05/07/2017
 
@@ -87,25 +93,25 @@
 ## 09/13/2015
 
 3. [](#bugfix)
-  * Remove useless field "provider" from configuration. Now this field used only for call the provider based on provider plugin options saved.
+  * Remove useless field `provider` from configuration. Now this field used only for call the provider based on provider plugin options saved.
 
 # v1.2.8
 ## 09/13/2015
 
 1. [](#new)
-  * Added multi language support for facebook template, use this format (`{grav_lang}_{grav_lang|upper}`). I'm not sure if this is the best way, but in most case working fine.
-  * Added new param for facebook comments "order_by" configurable from page options or into page header. Default is "Social".
+  * Added multi language support for Facebook template, use this format (`{grav_lang}_{grav_lang|upper}`). I'm not sure if this is the best way, but in most case working fine.
+  * Added new parameter for Facebook comments "order_by" configurable from page options or into page header. Default is "Social".
 2. [](#improved)
-  * Update facebook widget to v2.4.
-  * Change facebook param from "numposts" to "num_posts" for following the facebook comments param.
+  * Update Facebook widget to v2.4.
+  * Change Facebook parameter from `numposts` to `num_posts` for following the Facebook comments parameter.
   * Change twig translation function to twig filter.
 3. [](#bugfix)
   * Fixed `CHANGELOG.md` format.
   * Clear code.
-  * Added js escape into disqus template.
-  * Added translation for muut template.
-  * Added multi languages support into muut template.
-  * Added js escape into intensedebate template.
+  * Added JS escape into Disqus template.
+  * Added translation for Muut template.
+  * Added multi languages support into Muut template.
+  * Added JS escape into IntenseDebate template.
 
 # v1.2.7
 ## 09/12/2015
@@ -131,7 +137,7 @@
 2. [](#improved)
   * Update to working fine with the latest version of Grav.
   * Prepare for the admin plugin the possible to setup the plugin directly with form settings.
-  * Added the validation of jscomments header, if setup to true or with data array the plugin parsing, overwise no.
+  * Added the validation of jscomments header, if setup to true or with data array the plugin parsing, otherwise no.
   * Improve Grav cache for parsing jscomments when setup to page header.
 
 # v1.2.4
