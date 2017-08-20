@@ -1,3 +1,9 @@
+# v2.1.2
+## 08/20/2017
+
+3. [](#bugfix)
+  * Made IntenseDebate service provider protocol agnostic [#21](https://github.com/Sommerregen/grav-plugin-jscomments/issues/21)
+
 # v2.1.1
 ## 07/21/2017
 
