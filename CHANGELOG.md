@@ -1,3 +1,9 @@
+# v2.1.3
+## 01/13/2018
+
+3. [](#bugfix)
+  * Fixed issue with HyperComments service provider: No login solution except anonymous [#23][https://github.com/Sommerregen/grav-plugin-jscomments/issues/23] & [#24](https://github.com/Sommerregen/grav-plugin-jscomments/pull/24) (Thanks to [@foufrix](https://github.com/foufrix))
+
 # v2.1.2
 ## 08/20/2017
 
