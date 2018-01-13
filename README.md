@@ -119,7 +119,7 @@ providers:
       - 'tumblr'
 ```
 
-If you need to change any value, then the best process is to copy the [jscomments.yaml](jscomments.yaml) file into your `users/config/plugins/` folder (create it if it doesn't exist) and modify it there. This will override the default settings.
+If you need to change any value, then the best process is to copy the [jscomments.yaml](jscomments.yaml) file into your `user/config/plugins/` folder (create it if it doesn't exist) and modify it there. This will override the default settings.
 
 If you want to change any of these settings for a specific page you can do so via the page header. Below is an example of how these settings can be used.
 
