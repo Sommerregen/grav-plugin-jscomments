@@ -1,0 +1,43 @@
+{#
+   Isso - a commenting server similar to Disqus
+
+   @see https://posativ.org/isso/docs/quickstart/
+ #}
+<div id="jscomments">
+  {#
+    Adding Isso comment counter to home page.
+
+    @see https://posativ.org/isso/docs/extras/advanced-integration/
+  #}
+  {#{% if show_count %}
+    <a href="{{ url|default(page.url(true, true))|e('html_attr') }}#isso-thread">{{ 'PLUGINS.JS_COMMENTS.COMMENTS'|t|default('Comments') }}</a>
+  {% endif %}#}
+
+  {# Embed Isso Thread #}
+  <section id="isso-thread" data-title="{{ title|default(page.title)|e('js') }}"></section>
+
+  {% if not language and grav.language.enabled %}
+      {% set language = grav.language.getLanguage %}
+  {% endif %}
+
+  {# @see https://posativ.org/isso/docs/configuration/client/ #}
+  <script data-isso="//{{ host|e('html_attr') }}/"
+          data-isso="{{ language|e('html_attr') }}"
+
+          data-isso-css="{{ builtin_css ? 'true' : 'false' }}"
+          data-isso-reply-to-self="{{ reply_to_self ? 'true' : 'false' }}"
+          data-isso-require-author="{{ require.author ? 'true' : 'false' }}"
+          data-isso-require-email="{{ require.email ? 'true' : 'false' }}"
+          data-isso-max-comments-top="{{ comments.number == -1 ? 'inf' : comments.number }}"
+          data-isso-max-comments-nested="{{ comments.nested_number == -1 ? 'inf' : comments.nested_number }}"
+          data-isso-reveal-on-click="{{ coments.reveal ? 'true' : 'false' }}"
+          data-isso-avatar="{{ avatar.enabled ? 'true' : 'false' }}"
+          {% if avatar.background %}data-isso-avatar-bg="{{ avatar.background }}"{% endif %}
+          {% if avatar.foreground %}data-isso-avatar-fg="{{ avatar.foreground }}"{% endif %}
+          data-isso-vote="{{ vote.enabled ? 'true' : 'false' }}"
+          data-vote-levels="{{ vote.levels|join(' ') }}"
+
+          src="{{ host|trim('/')|e('html_attr') }}/js/embed.min.js"></script>
+  <noscript>{{ 'PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.NOSCRIPT'|t|raw }}</noscript>
+  {{ 'PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.COPYRIGHT'|t|raw }}
+</div>

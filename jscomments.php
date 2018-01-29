@@ -3,8 +3,8 @@
  * JSComments v2.1.4
  *
  * This plugin allows Grav to integrate comments into individual pages
- * from Discourse / Disqus / Facebook / Google+ / IntenseDebate and Muut
- * comment systems.
+ * from Discourse / Disqus / Facebook / Google+ / IntenseDebate / Isso
+ * and Muut comment systems.
  *
  * Dual licensed under the MIT or GPL Version 3 licenses, see LICENSE.
  * http://benjamin-regler.de/license/

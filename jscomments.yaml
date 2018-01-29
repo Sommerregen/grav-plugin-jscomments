@@ -35,6 +35,26 @@ providers:
   intensedebate:
     account_number: ''      # Account number
 
+  isso:
+    host: ''                # The URL to the Isso commenting system
+    builtin_css: true       # Use provided stylesheet
+    language: ''            # Default language (e.g. 'en')
+    reply_to_self: false    # Reply to self
+    require:
+      author: true          # Require author name
+      email: true           # Require author email
+    comments:
+      number: 10            # Number of top level comments to show by default
+      nested_number: 5      # Number of nested level comments to show by default
+      reveal: 5             # Number of comments to reveal on clicking the "X Hidden" link
+    avatar:
+      enabled: true         # Enable or disable avatar generation.
+      background: ''        # Set avatar background color.
+      foreground: ''        # Set avatar foreground color. Up to 8 colors are possible.
+    vote:
+      enabled: true         # Enable or disable voting feature on the client side.
+      levels: '-5,5'        # List of vote levels used to customize comment appearance based on score.
+
   muut:
     forum: ''               # Forum name
     channel: 'General'      # The name of the muut channel

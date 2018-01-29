@@ -1,6 +1,6 @@
 name: "JSComments"
 version: "2.1.4"
-description: "Add comments to your site with Discourse, Disqus, Facebook, Google+, HyperComments, IntenseDebate, and Muut comment systems."
+description: "Add comments to your site with Discourse, Disqus, Facebook, Google+, HyperComments, IntenseDebate, Isso, and Muut comment systems."
 icon: "comments-o"
 author:
   name: "Sommerregen"
@@ -217,6 +217,152 @@ form:
                   type: text
                   label: PLUGINS.JS_COMMENTS.PROVIDERS.INTENSEDEBATE.FIELDS.ACCOUNT_NUMBER
                   help: PLUGINS.JS_COMMENTS.PROVIDERS.INTENSEDEBATE.FIELDS.ACCOUNT_NUMBER_HELP
+                  validate:
+                    type: string
+
+            isso:
+              type: section
+              title: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.TITLE
+
+              fields:
+                providers.isso.host:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.HOST
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.HOST_HELP
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.HOST_PLACEHOLDER
+                  validate:
+                    type: string
+
+                providers.isso.builtin_css:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.BUILTIN_CSS
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.BUILTIN_CSS_HELP
+                  highlight: 1
+                  default: 1
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+
+                # providers.isso.show_count:
+                #   type: toggle
+                #   label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.COUNT
+                #   highlight: 1
+                #   default: 0
+                #   options:
+                #     1: PLUGIN_ADMIN.YES
+                #     0: PLUGIN_ADMIN.NO
+                #   validate:
+                #     type: bool
+
+                providers.isso.language:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.DEFAULT_LANGUAGE
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.DEFAULT_LANGUAGE_HELP
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.DEFAULT_LANGUAGE_PLACEHOLDER
+                  size: x-small
+                  validate:
+                    type: string
+
+                providers.isso.reply_to_self:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.REPLY_TO_SELF
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.REPLY_TO_SELF_HELP
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+
+                providers.isso.require:
+                  type: checkboxes
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.REQUIRE.LABEL
+                  options:
+                    author: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.REQUIRE.AUTHOR
+                    email: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.REQUIRE.EMAIL
+                  default:
+                    author: true
+                    email: true
+                  use: keys
+
+                providers.isso.comments.number:
+                  type: number
+                  size: x-small
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.COMMENTS.NUMBER_LABEL
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.COMMENTS.NUMBER_HELP
+                  append: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.COMMENTS.LABEL
+                  default: 10
+                  validate:
+                    min: -1
+
+                providers.isso.comments.nested_number:
+                  type: number
+                  size: x-small
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.COMMENTS.NESTED_LABEL
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.COMMENTS.NESTED_HELP
+                  append: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.COMMENTS.LABEL
+                  default: 5
+                  validate:
+                    min: -1
+
+                providers.isso.comments.reveal:
+                  type: number
+                  size: x-small
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.COMMENTS.REVEAL_LABEL
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.COMMENTS.REVEAL_HELP
+                  append: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.COMMENTS.LABEL
+                  default: 5
+                  validate:
+                    min: -1
+
+                providers.isso.avatar.enabled:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.AVATAR.LABEL
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.AVATAR.HELP
+                  highlight: 1
+                  default: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+
+                providers.isso.avatar.background:
+                  type: colorpicker
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.AVATAR.BG_COLOR
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.AVATAR.BG_COLOR_HELP
+                  placeholder: '#f0f0f0'
+                  default: ''
+
+                providers.isso.avatar.foreground:
+                  type: colorpicker
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.AVATAR.FG_COLOR
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.AVATAR.FG_COLOR_HELP
+                  placeholder: '#9abf88'
+                  default: ''
+
+                providers.isso.vote.enabled:
+                  type: toggle
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.VOTE.LABEL
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.VOTE.HELP
+                  highlight: 1
+                  default: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+
+                providers.isso.vote.levels:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.VOTE.LEVELS_LABEL
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.VOTE.LEVELS_HELP
+                  description: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.VOTE.LEVELS_DESCRIPTION
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.FIELDS.VOTE.LEVELS_PLACEHOLDER
+                  default: ''
                   validate:
                     type: string
 
