@@ -16,6 +16,7 @@ de:
         PAGE_ID: 'Überschreibe Seiten-ID'
 
       POWERED_BY: 'Kommentare unterstützt von <span>%s</span>'
+      COMMENTS: 'Kommentare'
 
       PROVIDERS:
         TITLE: 'Provider'
@@ -91,6 +92,62 @@ de:
             ACCOUNT_NUMBER: 'Account Nummer'
             ACCOUNT_NUMBER_HELP: 'Dies ist deine IntenseDebate Blog Account-Nummer, die du nach dem Erstellen des Blog-Accounts vorfindest.'
 
+        ISSO:
+          TITLE: 'Isso'
+          NOSCRIPT: 'Bitte aktivieren Sie JavaScript um <a href="https://posativ.org/isso/" rel="nofollow noopener noreferrer">die Isso-Kommentare anzuzeigen zu können.</a>'
+          COPYRIGHT: '<a href="https://posativ.org/isso/" rel="nofollow noopener noreferrer">Kommentare unterstützt von <span class="logo-disqus">Isso</span>.</a>'
+
+          FIELDS:
+            HOST: 'Isso-URL'
+            HOST_HELP: 'Die URL zum Isso-Kommentardienst.'
+            HOST_PLACEHOLDER: 'http://isso.example.com/'
+
+            COUNT: 'Kommentarzähler anzeigen'
+            DEFAULT_LANGUAGE: 'Sprache'
+            DEFAULT_LANGUAGE_HELP: 'Verwende die eingestellte Sprache für Google+ Kommentare.'
+            DEFAULT_LANGUAGE_PLACEHOLDER: 'de'
+
+            BUILTIN_CSS: 'Vorhandenes Stylesheet verwenden'
+            BUILTIN_CSS_HELP: 'Legt fest, ob Isso das Stylesheet automatisch anfügen soll oder nicht.'
+
+            REPLY_TO_SELF: 'Selbst-Antworten'
+            REPLY_TO_SELF_HELP: 'Erlaubt Antworten auf eigene Kommentare. Aktiveren falls Isso mit reply-to-self = true konfiguriert worden ist.'
+
+            REQUIRE:
+              LABEL: 'Pflichtfelder'
+              AUTHOR: 'Autor'
+              EMAIL: 'E-Mail-Adresse'
+
+            COMMENTS:
+              LABEL: 'Kommentare'
+              NUMBER_LABEL: 'Toplevel Kommentare'
+              NUMBER_HELP: 'Anzahl der Top-Level-Kommentare, die standardmäßig angezeigt werden sollen. Stellen Sie "-1" ein, um alle anzuzeigen, oder "0", um alle auszublenden.'
+
+              NESTED_LABEL: 'Verschachtelte Kommentare'
+              NESTED_HELP: 'Anzahl der verschachtelten Kommentare, die standardmäßig angezeigt werden sollen. Stellen Sie "-1" ein, um alle anzuzeigen, oder "0", um alle auszublenden.'
+
+              REVEAL_LABEL: 'Bei Klick anzeigen'
+              REVEAL_HELP: 'Anzahl der Kommentare, die beim Klicken auf den Link "X" angezeigt werden.'
+
+            AVATAR:
+              LABEL: 'Avatar'
+              HELP: 'Aktivieren oder deaktivieren Sie die Erstellung von Avataren.'
+
+              BG_COLOR: 'Hintergrundfarbe'
+              BG_COLOR_HELP: 'Avatar-Hintergrundfarbe einstellen. Jede gültige CSS-Farbe ist erlaubt.'
+
+              FG_COLOR: 'Vordergrundfarbe'
+              FG_COLOR_HELP: 'Avatar-Vordergrundfarbe einstellen. Jede gültige CSS-Farbe ist erlaubt.'
+
+            VOTE:
+              LABEL: 'Abstimmung'
+              HELP: 'Aktivieren oder Deaktivieren der Abstimmungsfunktion auf der Client-Seite.'
+
+              LEVELS_LABEL: 'Abstimmungsebenen'
+              LEVELS_HELP: 'Liste der Abstimmungsstufen, die verwendet werden, um das Aussehen des Kommentars basierend auf der Punktzahl anzupassen.'
+              LEVELS_DESCRIPTION: 'Geben Sie durch Komma getrennte Werte (z. B. "0,5,10,25,100") oder ein JSON-Array (z. B. "[-5,5,15]") an.'
+              LEVELS_PLACEHOLDER: 'z.B. "-5,5"'
+
         MUUT:
           TITLE: 'Muut'
           COMMENTS: 'Kommentare'
@@ -138,6 +195,7 @@ en:
         PAGE_ID: 'Override page ID'
 
       POWERED_BY: 'Comments powered by <span>%s</span>'
+      COMMENTS: 'Comments'
 
       PROVIDERS:
         TITLE: 'Provider'
@@ -213,6 +271,62 @@ en:
           FIELDS:
             ACCOUNT_NUMBER: 'Account number'
             ACCOUNT_NUMBER_HELP: 'This is your IntenseDebate blog account number, which is assigned when you create your account.'
+
+        ISSO:
+          TITLE: 'Isso'
+          NOSCRIPT: 'Please enable JavaScript to view the <a href="https://posativ.org/isso/" rel="nofollow noopener noreferrer">comments powered by Isso.</a>'
+          COPYRIGHT: '<a href="https://posativ.org/isso/" rel="nofollow noopener noreferrer">Blog Comments powered by <span>Isso</span>.</a>'
+
+          FIELDS:
+            HOST: 'Isso URL'
+            HOST_HELP: 'The URL to the Isso commenting system.'
+            HOST_PLACEHOLDER: 'http://isso.example.com/'
+
+            COUNT: 'Show comment count'
+            DEFAULT_LANGUAGE: 'Default language'
+            DEFAULT_LANGUAGE_HELP: 'Dynamically load Google+ comments in different languages on a per-page basis.'
+            DEFAULT_LANGUAGE_PLACEHOLDER: 'en'
+
+            BUILTIN_CSS: 'Use provided stylesheet'
+            BUILTIN_CSS_HELP: 'Set to false prevents Isso from automatically appending the stylesheet.'
+
+            REPLY_TO_SELF: 'Reply to self'
+            REPLY_TO_SELF_HELP: 'Set to true when spam guard is configured with reply-to-self = true.'
+
+            REQUIRE:
+              LABEL: 'Require'
+              AUTHOR: 'Author name'
+              EMAIL: 'Author email'
+
+            COMMENTS:
+              LABEL: 'comments'
+              NUMBER_LABEL: 'Toplevel comments'
+              NUMBER_HELP: 'Number of top level comments to show by default. Set to "-1" to show all, or "0" to hide all.'
+
+              NESTED_LABEL: 'Nested comments'
+              NESTED_HELP: 'Number of nested comments to show by default. Set to "-1" to show all, or "0" to hide all.'
+
+              REVEAL_LABEL: 'Reveal on click'
+              REVEAL_HELP: 'Number of comments to reveal on clicking the "X Hidden" link.'
+
+            AVATAR:
+              LABEL: 'Avatar'
+              HELP: 'Enable or disable avatar generation.'
+
+              BG_COLOR: 'Background color'
+              BG_COLOR_HELP: 'Set avatar background color. Any valid CSS color will do.'
+
+              FG_COLOR: 'Foreground color'
+              FG_COLOR_HELP: 'Set avatar foreground color. Any valid CSS color will do.'
+
+            VOTE:
+              LABEL: 'Vote'
+              HELP: 'Enable or disable voting feature on the client side.'
+
+              LEVELS_LABEL: 'Vote levels'
+              LEVELS_HELP: 'List of vote levels used to customize comment appearance based on score.'
+              LEVELS_DESCRIPTION: 'Provide a comma-separated values (e.g., "0,5,10,25,100") or a JSON array (e.g., "[-5,5,15]").'
+              LEVELS_PLACEHOLDER: 'e.g., "-5,5"'
 
         MUUT:
           TITLE: 'Muut'
