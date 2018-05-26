@@ -37,7 +37,7 @@
           data-isso-vote="{{ vote.enabled ? 'true' : 'false' }}"
           data-vote-levels="{{ vote.levels|join(' ') }}"
 
-          src="{{ host|trim('/')|e('html_attr') }}/js/embed.min.js"></script>
+          src="//{{ host|trim('/')|e('html_attr') }}/js/embed.min.js"></script>
   <noscript>{{ 'PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.NOSCRIPT'|t|raw }}</noscript>
   {{ 'PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.COPYRIGHT'|t|raw }}
 </div>
