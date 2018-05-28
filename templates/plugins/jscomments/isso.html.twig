@@ -10,19 +10,19 @@
     @see https://posativ.org/isso/docs/extras/advanced-integration/
   #}
   {#{% if show_count %}
-    <a href="{{ url|default(page.url(true, true))|e('html_attr') }}#isso-thread">{{ 'PLUGINS.JS_COMMENTS.COMMENTS'|t|default('Comments') }}</a>
+    <a href="{{ url|default(page.url(true, true))|e }}#isso-thread">{{ 'PLUGINS.JS_COMMENTS.COMMENTS'|t|default('Comments') }}</a>
   {% endif %}#}
 
   {# Embed Isso Thread #}
-  <section id="isso-thread" data-title="{{ title|default(page.title)|e('js') }}"></section>
+  <section id="isso-thread" data-title="{{ title|default(page.title)|e }}"></section>
 
   {% if not language and grav.language.enabled %}
       {% set language = grav.language.getLanguage %}
   {% endif %}
 
   {# @see https://posativ.org/isso/docs/configuration/client/ #}
-  <script data-isso="//{{ host|e('html_attr') }}/"
-          data-isso="{{ language|e('html_attr') }}"
+  <script data-isso="//{{ host|e }}/"
+          data-isso="{{ language|e }}"
 
           data-isso-css="{{ builtin_css ? 'true' : 'false' }}"
           data-isso-reply-to-self="{{ reply_to_self ? 'true' : 'false' }}"
@@ -37,7 +37,7 @@
           data-isso-vote="{{ vote.enabled ? 'true' : 'false' }}"
           data-vote-levels="{{ vote.levels|join(' ') }}"
 
-          src="//{{ host|trim('/')|e('html_attr') }}/js/embed.min.js"></script>
+          src="//{{ host|trim('/')|e }}/js/embed.min.js"></script>
   <noscript>{{ 'PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.NOSCRIPT'|t|raw }}</noscript>
   {{ 'PLUGINS.JS_COMMENTS.PROVIDERS.ISSO.COPYRIGHT'|t|raw }}
 </div>
