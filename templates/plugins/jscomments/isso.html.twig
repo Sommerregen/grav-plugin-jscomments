@@ -21,7 +21,7 @@
   {% endif %}
 
   {# @see https://posativ.org/isso/docs/configuration/client/ #}
-  <script data-isso="//{{ host|e }}/"
+  <script data-isso="//{{ host|trim('/')|e }}/"
           data-isso="{{ language|e }}"
 
           data-isso-css="{{ builtin_css ? 'true' : 'false' }}"
