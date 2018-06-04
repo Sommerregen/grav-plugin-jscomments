@@ -1,5 +1,11 @@
+# v2.2.1
+## 06/04/2018
+
+3. [](#bugfix)
+  * Fixed issues in Isso template [#26](https://github.com/Sommerregen/grav-plugin-jscomments/pull/26)
+
 # v2.2.0
-## 01/13/2018
+## 01/29/2018
 
 1. [](#new)
   * Added [Isso commenting system](https://posativ.org/isso/) [#12](https://github.com/Sommerregen/grav-plugin-jscomments/issues/12)
