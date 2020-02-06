@@ -2,7 +2,7 @@
 
 [![Release](https://img.shields.io/github/release/sommerregen/grav-plugin-jscomments.svg)][project] [![Issues](https://img.shields.io/github/issues/sommerregen/grav-plugin-jscomments.svg)][issues] [![Dual license](https://img.shields.io/badge/dual%20license-MIT%2FGPL-blue.svg)](LICENSE "License")
 
-> **JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Discourse, Disqus, Facebook, Google+, HyperComments, IntenseDebate, and Muut comment systems.
+> **JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Discourse, Disqus, Facebook, Google+, HyperComments, IntenseDebate, Muut and Commento comment systems:.
 
 ##### Table of Contents:
 
@@ -137,6 +137,9 @@ providers:
       - 'facebook'
       - 'twitter'
       - 'tumblr'
+
+  commento:
+    host: "" # The URL to the Commento commenting system
 ```
 
 If you need to change any value, then the best process is to copy the [jscomments.yaml](jscomments.yaml) file into your `user/config/plugins/` folder (create it if it doesn't exist) and modify it there. This will override the default settings.
