@@ -6,7 +6,7 @@ author:
   name: "Sommerregen"
   email: "sommerregen@benjamin-regler.de"
 homepage: "https://github.com/sommerregen/grav-plugin-jscomments"
-keywords: ["jscomments", "plugin", "comments", "services", "discourse", "disqus", "facebook", "google", "hypercomments", "intensedebate", "muut"]
+keywords: ["jscomments", "plugin", "comments", "services", "discourse", "disqus", "facebook", "google", "hypercomments", "intensedebate", "muut", "commento"]
 docs: "https://github.com/sommerregen/grav-plugin-jscomments/blob/master/README.md"
 bugs: "https://github.com/sommerregen/grav-plugin-jscomments/issues"
 license: "MIT/GPL"
@@ -465,3 +465,16 @@ form:
                   placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL_PLACEHOLDER
                   validate:
                     type: commalist
+                    type: commalist
+            commento:
+              type: section
+              title: PLUGINS.JS_COMMENTS.PROVIDERS.COMMENTO.TITLE
+
+              fields:
+                providers.commento.host:
+                  type: text
+                  label: PLUGINS.JS_COMMENTS.PROVIDERS.COMMENTO.FIELDS.HOST
+                  help: PLUGINS.JS_COMMENTS.PROVIDERS.COMMENTO.FIELDS.HOST_HELP
+                  placeholder: PLUGINS.JS_COMMENTS.PROVIDERS.COMMENTO.FIELDS.HOST_PLACEHOLDER
+                  validate:
+                    type: string

@@ -177,6 +177,15 @@ de:
             SOCIAL: 'Die Ordnung und die Menge der sozialen Netzwerke'
             SOCIAL_HELP: 'Hiermit können Sie die Liste und die Reihenfolge der sozialen Netzwerke angeben, durch die die Genehmigung möglich ist. Der Wert der Berechtigungsanbieter wird über ein Komma angegeben, die Reihenfolge der Sozialnetzzuweisungen entspricht der Reihenfolge, in der sie im Widget angezeigt werden'
             SOCIAL_PLACEHOLDER: 'z.B., vk, google, twitter, tumblr'
+
+        COMMENTO:
+          TITLE: "Commento"
+          NOSCRIPT: 'Bitte aktivieren Sie JavaScript um <a href="https://commento.io/" rel="nofollow noopener noreferrer">die Commento-Kommentare anzuzeigen zu können.</a>'
+          COPYRIGHT: '<a href="https://commento.io/" rel="nofollow noopener noreferrer">Kommentare unterstützt von <span>Commento</span>.</a>'
+
+          FIELDS:
+            HOST: "Commento-URL"
+            HOST_HELP: "Die URL zum Commento-Kommentardienst."
 # English
 en:
   PLUGINS:
@@ -358,6 +367,16 @@ en:
             SOCIAL_HELP: 'Allows you to specify the list and order of social networks through which authorization will be possible. The value of the authorization providers is specified via a comma, the order of the social network assignments corresponds to the order in which they are displayed in the widget'
             SOCIAL_PLACEHOLDER: 'e.g., vk, google, twitter, tumblr'
 
+        COMMENTO:
+          TITLE: "Commento"
+          NOSCRIPT: 'Please enable JavaScript to view the <a href="https://commento.io/" rel="nofollow noopener noreferrer">comments powered by Commento.</a>'
+          COPYRIGHT: '<a href="https://commento.io/" rel="nofollow noopener noreferrer">Blog Comments powered by <span>Commento</span>.</a>'
+
+          FIELDS:
+            HOST: "Commento URL"
+            HOST_HELP: "The URL to the Commento commenting system."
+            HOST_PLACEHOLDER: "http://commento.example.com/"
+
 # Romanian
 ro:
   PLUGINS:
@@ -467,6 +486,15 @@ ro:
             SHOW_COUNT: 'Afișați un contor de comentarii'
             SOCIAL: 'Ordinea și setul de rețele sociale'
             SOCIAL_HELP: 'Vă permite să specificați lista și ordinea rețelelor sociale prin care autorizarea va fi posibilă. Valoarea furnizorilor de autorizație este specificată printr-o virgulă, ordinea repartizării rețelei sociale corespunde ordinii în care acestea sunt afișate în widget-ul'
+
+        COMMENTO:
+          TITLE: 'Commento'
+          NOSCRIPT: 'Te rugăm să activezi JavaScript pentru a vizualiza comentariile <a href="https://commento.io/" rel="nofollow noopener noreferrer"> prin Commento.</a>'
+          COPYRIGHT: '<a href="https://commento.io/" rel="nofollow noopener noreferrer">Comentarii furmizate de  <span>Commento</span>.</a>'
+
+          FIELDS:
+            HOST: 'URL pentru Commento'
+            HOST_HELP: 'URL-ul către sistemul de comentarii Commento.'
 
 # Italian
 it:
@@ -643,3 +671,203 @@ ru:
             SOCIAL: 'Порядок и набор социальных сетей.'
             SOCIAL_HELP: 'Позволяет задать перечень и порядок социальных сетей через которые будет возможна авторизация. Значение провайдеров авторизации задаются через запятую, порядок задания соц.сетей соответствует порядку их отображения в виджете.'
             SOCIAL_PLACEHOLDER: 'например: vk, google, twitter, tumblr'
+            
+        COMMENTO:
+          TITLE: 'Commento'
+          NOSCRIPT: 'Включите JavaScript, чтобы просмотреть <a href="https://commento.io/" rel="nofollow noopener noreferrer">комментарии, основанные на Commento.</a>'
+          COPYRIGHT: '<a href="https://commento.io/" rel="nofollow noopener noreferrer">Blog Comments powered by <span>Commento</span>.</a>'
+
+          FIELDS:
+            HOST: 'Commento URL'
+            HOST_HELP: 'URL-адрес системы комментирования Commento.'
+
+# Portuguese Brazil
+pt-br:
+  PLUGINS:
+    JS_COMMENTS:
+      PLUGIN_NAME: "JSComments"
+      PLUGIN_STATUS: "Status do Plugin"
+      PLUGIN_ACTIVE: "Ativo"
+      PLUGIN_ACTIVE_HELP: "Esta opção é usada para (des)ativar o plugin por página."
+
+      NONE_SELECTED: "- Nenhum selecionado -"
+      USE_DEFAULT: "- Usar padrão -"
+
+      OVERRIDE:
+        PAGE_TITLE: "Sobrescrever título da página"
+        PAGE_URL: "Sobrescrever URL da página"
+        PAGE_ID: "Sobrescrever ID da página"
+
+      POWERED_BY: "Comentários fornecido por <span>%s</span>"
+      COMMENTS: "Comentários"
+
+      PROVIDERS:
+        TITLE: "Provedor"
+        TITLE_SETTINGS: "Configurações do provedor"
+        HELP: "Escolha um provedor de sistema de comentários."
+        DISCOURSE:
+          TITLE: "Discourse"
+          NOSCRIPT: 'Por favor ative o JavaScript para ver <a href="https://www.discourse.org/" rel="nofollow noopener noreferrer">comentários fornecidos por Discourse.</a>'
+          COPYRIGHT: '<a href="https://www.discourse.org/" rel="nofollow noopener noreferrer">Blog Comentários fornecidos por <span>Discourse</span>.</a>'
+
+          FIELDS:
+            HOST: "URL Discourse"
+            HOST_HELP: "URL do sistema de comentários Discourse."
+            HOST_PLACEHOLDER: "http://discourse.example.com/"
+
+        DISQUS:
+          TITLE: "Disqus"
+          NOSCRIPT: 'Por favor ative o JavaScript para ver <a href="http://disqus.com" rel="nofollow noopener noreferrer">comentários fornecidos por Disqus.</a>'
+          COPYRIGHT: '<a href="http://disqus.com" rel="nofollow noopener noreferrer">Blog Comentários fornecidos por <span>Disqus</span>.</a>'
+
+          FIELDS:
+            SHORTNAME: "Nome curto do Forum (shortname)"
+            SHORTNAME_HELP: "Informa ao serviço Disqus o 'shortname' do forum, que é um identificador único para o seu site registrado no Disqus. Se indefinido o Disques não carregará."
+            SHORTNAME_PLACEHOLDER: "exemplo: getgrav"
+
+            COUNT: "Mostrar contagem de comentários"
+
+            DEFAULT_LANGUAGE: "Língua padrão"
+            DEFAULT_LANGUAGE_HELP: "Carregar dinamicamente o Disqus embutido em idiomas diferentes por página."
+            DEFAULT_LANGUAGE_PLACEHOLDER: "en"
+
+        FACEBOOK:
+          TITLE: "Facebook"
+          FIELDS:
+            APPID: "App ID"
+            APPID_HELP: "O App ID que você obtem da Página de Desenvolvedores do Facebook(https://developers.facebook.com/apps)."
+            APPID_PLACEHOLDER: "0123456789012345"
+            LANGUAGE: "Idioma"
+            LANGUAGE_HELP: "Ajusta o idioma do plugin de comentário carregando a versão localizada SDK para JavaScript do Facebook."
+            LANGUAGE_PLACEHOLDER: "en_EN"
+            NUM_POSTS: "Número de comentários visíveis"
+            NUM_POSTS_HELP: "Número de comentários visíveis por padrão"
+            NUM_POSTS_APPEND: "comentários"
+            COLORSCHEME:
+              TITLE: "Esquema de cores"
+              HELP: 'Esquema de cores utilizado pelo plugin de comentários. Pode ser "light" ou "dark".'
+              OPTIONS:
+                LIGHT: "Light"
+                DARK: "Dark"
+            ORDER_BY:
+              TITLE: "Ordenado por"
+              HELP: "Ordem utilizada para ordenar comentários."
+              OPTIONS:
+                SOCIAL: "Social"
+                REVERSE_TIME: "Data reversa"
+                TIME: "Tempo"
+            WIDTH: "Largura (px or %)"
+            WIDTH_HELP: "A largura do plugin de comentários na página. Este pode ser tanto em pixel quanto em percentual para largura fluída."
+
+        GOOGLEPLUS:
+          TITLE: "Google+"
+          FIELDS:
+            COUNT: "Mostrar contagem de comentários"
+            DEFAULT_LANGUAGE: "Idioma padrão"
+            DEFAULT_LANGUAGE_HELP: "Carregar dinamicamente os comentários Google em idiomas diferentes por página."
+            DEFAULT_LANGUAGE_PLACEHOLDER: "en"
+            WIDTH: "Largura (px or %)"
+            WIDTH_HELP: "A largura do plugin de comentários na página. Este pode ser tanto em pixel quanto em percentual para largura fluída."
+
+        INTENSEDEBATE:
+          TITLE: "IntenseDebate"
+          FIELDS:
+            ACCOUNT_NUMBER: "Número da conta"
+            ACCOUNT_NUMBER_HELP: "Este é su número da conta do blog no IntenseDebate, que é gerado ao quando você cria sua conta."
+
+        ISSO:
+          TITLE: "Isso"
+          NOSCRIPT: 'Por favor ative o JavaScript para ver <a href="https://posativ.org/isso/" rel="nofollow noopener noreferrer">comentários fornecidos por Isso.</a>'
+          COPYRIGHT: '<a href="https://posativ.org/isso/" rel="nofollow noopener noreferrer">Blog Comentários fornecidos por <span>Isso</span>.</a>'
+
+          FIELDS:
+            HOST: "URL do Isso"
+            HOST_HELP: "URL do sistema de comentários Isso."
+            HOST_PLACEHOLDER: "http://isso.example.com/"
+
+            COUNT: "Mostrar contagem de comentários"
+            DEFAULT_LANGUAGE: "Idioma padrão"
+            DEFAULT_LANGUAGE_HELP: "Carregar dinamicamente os comentários Google em idiomas diferentes por página."
+            DEFAULT_LANGUAGE_PLACEHOLDER: "en"
+
+            BUILTIN_CSS: "Utilizasr folhas de estilos CSS fornecidas"
+            BUILTIN_CSS_HELP: "Definir como falso evita que o Isso automaticamente adicionar a folha de estilo CSS."
+
+            REPLY_TO_SELF: "Responder para so"
+            REPLY_TO_SELF_HELP: "Definir para sim quando o guardião de spam estiver definido como reply-to-self = true."
+
+            REQUIRE:
+              LABEL: "Solicitar"
+              AUTHOR: "Nome do autor"
+              EMAIL: "Email do autor"
+
+            COMMENTS:
+              LABEL: "comments"
+              NUMBER_LABEL: "Comentários de nível principal"
+              NUMBER_HELP: 'Número de comentários de nível principal a mostrar por padrão. Definir como "-1" para mostrar todos, ou "0" para ocultar todos.'
+
+              NESTED_LABEL: "Comentários aninhados"
+              NESTED_HELP: 'Número de comentários de aninhados a mostrar por padrão. Definir como "-1" para mostrar todos, ou "0" para ocultar todos.'
+
+              REVEAL_LABEL: "Revelar ao clicar"
+              REVEAL_HELP: 'Número de comentário a revelar ao clicar no link "X Hidden".'
+
+            AVATAR:
+              LABEL: "Avatar"
+              HELP: "Ativar ou desativar a geração de avatar."
+
+              BG_COLOR: "Cor de fundo"
+              BG_COLOR_HELP: "Definir a cor de fundo do avatar. Qualquer cor CSS funciona."
+
+              FG_COLOR: "Cor de primeiro plano"
+              FG_COLOR_HELP: "Definir a cor de primeiro plano do avatar. Qualquer cor CSS funciona."
+
+            VOTE:
+              LABEL: "Voto"
+              HELP: "Ativa ou desativa o sistema de voto no lado do cliente."
+
+              LEVELS_LABEL: "Níveis de voto"
+              LEVELS_HELP: "Lista de níveis de voto utilizados para personalizar a aparência do comentário baseado no score."
+              LEVELS_DESCRIPTION: 'Informa um lista de valores separados por vírgula (exemplo: "0,5,10,25,100") ou um array JSON (e.g., "[-5,5,15]").'
+              LEVELS_PLACEHOLDER: 'exemplo: "-5,5"'
+
+        MUUT:
+          TITLE: "Muut"
+          COMMENTS: "Comentários"
+
+          FIELDS:
+            FORUM: "Nome do fórum"
+            FORUM_PLACEHOLDER: "exemplo: getgrav"
+            CHANNEL: "Channel"
+            CHANNEL_PLACEHOLDER: "exemplo: geral"
+            SHOW_ONLINE: "Mostrar online"
+            SHOW_TITLE: "Mostrar título"
+            UPLOAD: "Permitir uploads"
+            SHARE: 'Mostrar botão "Curtir"'
+            WIDGET: "Widget mensagens"
+            WIDGET_HELP: "Mostrar o botão de mensagens no rodapé dirito do navegador."
+            LANGUAGE: "Idioma"
+            LANGUAGE_PLACEHOLDER: "en"
+
+        HYPERCOMMENTS:
+          TITLE: "HyperComments"
+          COMMENTS: "Comentários"
+          COPYRIGHT: '<a href="http://hypercomments.com" rel="nofollow noopener noreferrer" class="hc-link" title="comments widget"> Comentários fornecidos por <span>HyperComments</span>.</a>'
+
+          FIELDS:
+            WIDGET_ID: "ID do seu widget"
+            SHOW_COUNT: "Mostrar contador de comentários"
+            SOCIAL: "Ordenar e definir redes sociais."
+            SOCIAL_HELP: "Permite que você especifique uma lista e ordene as redes sociais através das quais é possível autenticar. O valor dos provedores de autenticação é separada por vírgula, a ordem corresponde à ordem de exibição no widget"
+            SOCIAL_PLACEHOLDER: "exemplo: vk, google, twitter, tumblr"
+
+        COMMENTO:
+          TITLE: "Commento"
+          NOSCRIPT: 'Por favor ative o JavaScript para ver <a href="https://commento.io" rel="nofollow noopener noreferrer">comentários fornecidos por Commento.</a>'
+          COPYRIGHT: '<a href="https://commento.io" rel="nofollow noopener noreferrer">Blog Comentários fornecidos por <span>Commento</span>.</a>'
+
+          FIELDS:
+            HOST: "URL Commento"
+            HOST_HELP: "URL do sistema de comentários Commento."
+            HOST_PLACEHOLDER: "http://commento.example.com/"
+

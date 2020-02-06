@@ -77,3 +77,6 @@ providers:
       - 'facebook'
       - 'twitter'
       - 'tumblr'
+
+  commento:
+    host: "" # The URL to the Commento commenting system      
